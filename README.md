@@ -8,5 +8,5 @@ All URLs must start http://api.cmaphq.com/v1. **SSL Only**. The path is prefixed
 Before your app can request data from CMAP's API you must obtain a consumer key from us. For more information contact us at support@cmaphq.com.
 
 ## API ready for use
-- [Expenses](https://github.com/jmedialtd/CMAP-API/blob/master/sections/expenses.md)
-- [Timesheets](https://github.com/jmedialtd/CMAP-API/blob/master/sections/timesheets.md)
+- [Expenses](https://github.com/jmedialtd/CMAP-API/blob/master/Sections/expenses.md)
+- [Timesheets](https://github.com/jmedialtd/CMAP-API/blob/master/Sections/timesheets.md)
