@@ -2,7 +2,7 @@
 Use projects to search for projects within CMAP
 
 ## Get Projects
-* `* GET GET v1/projects/?status=potential|project|closed&q=[query]` Returns the projects that match search query and status
+* `* GET v1/projects/?status=potential|project|closed&q=[query]` Returns the projects that match search query and status
 
 ```javascript
 [{
