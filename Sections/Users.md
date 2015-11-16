@@ -31,5 +31,22 @@ Use users to list all users or search for users
 	"officeTelephone" : "01625 521 000" 
 }]
 ```
+* `* GET v1/users/status` Returns status information for the logged in user such as current timesheet week, holiday days remaining, no. of weeks behind on their timesheet etc..
+
+```javascript
+[{
+	"additionalTime" : true /* whether or not the client has the additional time feature activated */
+	"workingHours" : "37.5" /* The user's current working hours */
+	"weeksOverdue" : "4", /* number of weeks behind on their timesheets */
+	"timesheetWeek" : "2015-11-16",
+	"openClaims" : "3", /* no. of open expense claims */
+	"overdueActivities" : "0",
+	"todaysActivities" : "5",
+	"contacts" : "4534", /* no. of contacts in the client's database */
+	"users" : "45", /* no. of user accounts */
+	"daysRemaining" : "1.5" /* no. of holiday days remaining */ 
+}]
+```
+
 
 * `* GET v1/users/5/photo` Returns the profile photo for the specified user as a png
