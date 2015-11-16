@@ -115,4 +115,47 @@ Use Timesheets to manage timesheet entries for the logged in user
 }
 ```
 
+* `* POST v1/timesheets/` Creates a timesheet entry and returns the id of the new entry
+
+```javascript
+{ 
+	"date" : "2015-09-21",
+	"taskId" : 2343,
+	"projectId" : 5413,
+	"internalCodeId" : null,
+	"contractId" : null,
+	"hours" : 7.5,
+	"notes" : "Working hard in this project",
+	"roleId" : 345,
+	"workTypeId" : null,
+	"contractWorkTypeId" : null,
+	"additionalTime" : false
+}
+```
+* `* PUT v1/timesheets/5` Updates a timesheet entry
+
+```javascript
+{ 
+	"id" : 34543, 
+	"date" : "2015-09-21",
+	"taskId" : 2343,
+	"projectId" : 5413,
+	"internalCodeId" : null,
+	"contractId" : null,
+	"hours" : 7,
+	"notes" : "Working hard in this project, now with extra notes",
+	"roleId" : 345,
+	"workTypeId" : null,
+	"contractWorkTypeId" : null,
+	"additionalTime" : false
+}
+```
+
+* `* DELETE v1/timesheets/65` Deletes the timesheet entry
+```javascript
+{ 
+	"result" : true
+}
+```
+
 * `* POST v1/timesheets/submit` Submits the current users timesheet week
