@@ -52,48 +52,23 @@ Use Timesheets to manage timesheet entries for the logged in user
 
 ```javascript
 {
-	"tasks":{
-		"228510":[{
-			"BudgetId":228585,
-			"BudgetTabId":344234,
-			"Name":"CMAP Customisations",
-			"OrderNo":0,
-			"ReadOnly":false,
-			"FeeValue":0.0,
-			"ActualCostValue":0.0,
-			"Margin":0.0,
-			"BudgetSections":[{
-				"BudgetTabId":344234,
-				"BudgetSectionId":595309,
-				"Name":"CMAP Configuration",
-				"OrderNo":0,
-				"Locked":false,
-				"BudgetTasks":[{
-					"BudgetSectionId":595309,
-					"BudgetTaskId":947606,
-					"Name":"Configuration Tasks",
-					"Duration":2.0,
-					"MonthlyDuration":null,
-					"FeePercentage":null,
-					"OurFee":null,
-					"BudgetUnits":null,
-					"PercentComplete":0.0,
-					"Start":"2015-02-16T00:00:00",
-					"End":null,
-					"DailyValue":null,
-					"projectId":null,
-					"Project":null,
-					"IgnoreWeekends":null,
-					"Notes":null,
-					"OrderNo":null,
-					"Probability":null,
-					"CurrencyId":null,
-					"RoleId":null,
-					"BusinessUnitId":null
-					}]
-				}]
-			}]
-		}
+	"tasks":[{
+	"BudgetSectionID" : 34534,
+	"BudgetTaskID" : 243,
+	"Name" : "Task One",
+	"OrderNo" : 1,
+	"PercentageComplete" : 50,
+	"Section" : "Section One",
+	"Tab" : "Development"
+	},{
+	"BudgetSectionID" : 34534,
+	"BudgetTaskID" : 345,
+	"Name" : "Task Two",
+	"OrderNo" : 2,
+	"PercentageComplete" : 25,
+	"Section" : "Section One",
+	"Tab" : "Development"
+	}]
 }
 ```
 * `* GET v1/timesheets/5` Returns an individual timesheet entry
