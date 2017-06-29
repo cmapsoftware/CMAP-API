@@ -20,3 +20,28 @@ Use projects to search for projects within CMAP
 	"title" : "Website Project"
 }]
 ```
+
+## Get Project Details
+* `* GET v1/projects/?status=potential|project|closed&q=[query]` Returns the details for a project with the specified ID
+
+```javascript
+{ 
+	"Title", "Smith Industries"
+        "Code", "34543",
+        "Status", "Potential",
+        "Contact", "John Smith",
+        "Stage", "Initial Lead",
+        "Probability", 10,
+        "EstimatedPrice", 10000,
+        "StartDate", "01/01/2017T00:00:00",
+        "EndDate", "01/01/2018T00:00:00",
+        "FeeType", "Fixed Fee",
+        "Sector", "Health",
+        "ProjectType", "Strategy",
+        "LeadSource", "Existing Client",
+        "Owner", "Jane Smith",
+        "Private", "No"
+        "Bio", ""
+        "Total Project Value" : 0 
+}
+```
