@@ -22,7 +22,7 @@ Use projects to search for projects within CMAP
 ```
 
 ## Get Project Details
-* `* GET v1/projects/?status=potential|project|closed&q=[query]` Returns the details for a project with the specified ID
+* `* GET v1/projects/[id]` Returns the details for a project with the specified ID
 
 ```javascript
 { 
