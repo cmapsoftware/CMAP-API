@@ -56,7 +56,7 @@ Use expenses to record your personal and project expenses in CMAP
 }
 ```
 
-* `PUT v1/expenses5` Updates the name of an expense claim
+* `PUT v1/expenses/5` Updates the name of an expense claim
 
 ```json
 {
