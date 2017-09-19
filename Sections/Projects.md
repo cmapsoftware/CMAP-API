@@ -21,6 +21,22 @@ Use projects to search for projects within CMAP
 }]
 ```
 
+## Get Projects
+* `* GET v1/projects/?type=expenses|timesheets&q=[query]` Returns the projects for timesheets or expenses that match the search query
+
+```javascript
+[{
+	"id" : "7867"
+	"name" : "34543 - New Project",
+	"isContract" : "false"
+},
+{
+	"id" : "453466",
+	"name" : "10001 - Website Project",
+	"isContract" : "false"
+}]
+```
+
 ## Get Project Details
 * `* GET v1/project/[id]` Returns the details for a project with the specified ID
 
