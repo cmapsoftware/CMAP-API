@@ -55,6 +55,21 @@ Use resources to return various helper items used throughout the system
 }]
 ```
 
+* `* GET v1/resources/workactivities` Returns the list of work activities for the client
+```javascript
+[{ 
+	"id" : "1",
+	"name" : "Site Investigation",
+	"order" : "1",
+	"isArchived" : false
+},{ 
+	"id" : "1",
+	"name" : "Site Review",
+	"order" : "2",
+	"isArchived" : false	
+}]
+```
+
 * `* GET v1/resources/currencies` Returns the list of currencies available for the client
 
 ```javascript
