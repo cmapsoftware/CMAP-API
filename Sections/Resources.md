@@ -97,3 +97,15 @@ Use resources to return various helper items used throughout the system
 	"code" : "Sickness"	
 }]
 ```
+
+* `* GET v1/resources/activitycategories` Returns the list of activity categories
+
+```javascript
+[{ 
+	"id" : "1",
+	"name" : "Meeting"	
+},{ 
+	"id" : "2",
+	"name" : "Telephone Call"	
+}]
+```
