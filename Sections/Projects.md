@@ -2,7 +2,7 @@
 Use projects to search for projects within CMAP
 
 ## Get Projects
-* `* GET v1/projects/?status=potential|project|closed&q=[query]` Returns the projects that match search query and status
+* `* GET v1/projects/?status=[status]&q=[query]` Returns the projects that match search query and status. Status can be `potential` or `project` or `closed`
 
 ```javascript
 [{
@@ -22,7 +22,7 @@ Use projects to search for projects within CMAP
 ```
 
 ## Get Projects
-* `* GET v1/projects/?type=expenses|timesheets&q=[query]` Returns the projects for timesheets or expenses that match the search query
+* `* GET v1/projects/?type=[type]&q=[query]` Returns the projects for timesheets or expenses that match the search query. The type can be `expenses` or `timesheets`
 
 ```javascript
 [{
@@ -34,6 +34,24 @@ Use projects to search for projects within CMAP
 	"id" : "453466",
 	"name" : "10001 - Website Project",
 	"isContract" : "false"
+}]
+```
+
+## Get Contact Projects
+* `* GET v1/projects/?status=[status]&contactId=876` Returns all the projects associated with a contact. The status of the project can be `potential` or `project` or `closed`
+
+```javascript
+[{
+	"id" : "7867"
+	"code" : "34543",
+	"title" : "Onboarding Project"
+	"fee" : £57899
+},
+{
+	"id" : "4356"
+	"code" : "45656",
+	"title" : "Development Project"
+	"fee" : £89789
 }]
 ```
 
