@@ -18,6 +18,58 @@ Use Timesheets to manage timesheet entries for the logged in user
 }]
 ```
 
+
+* `* GET v1/timesheets?week=2015-09-21&projectId=[id]` Returns all the timesheet entries for the specified week and specified projectId
+
+```javascript
+[{ 
+	"id" : 2423,
+	"hours" : 7.5,
+	"date" : "2015-07-01",
+	"notes" : "Lots of coding",
+	"projectId" : 3424,
+	"contractId" : null,
+	"internalCodeId" : null,
+	"project" : "1003 - The Coding Project",
+	"contract" : "",
+	"internalCode" : "" 
+}]
+```
+
+* `* GET v1/timesheets?week=2015-09-21&internalCodeId=[id]` Returns all the timesheet entries for the specified week and specified internalcodeId
+
+```javascript
+[{ 
+	"id" : 2423,
+	"hours" : 7.5,
+	"date" : "2015-07-01",
+	"notes" : "Lots of coding",
+	"projectId" : null,
+	"contractId" : null,
+	"internalCodeId" : 456456,
+	"project" : "",
+	"internalCode" : "Internal Meeting" 
+}]
+```
+
+
+* `* GET v1/timesheets?date=2015-09-21` Returns all the timesheet entries for the specified date
+
+```javascript
+[{ 
+	"id" : 2423,
+	"hours" : 7.5,
+	"date" : "2015-07-01",
+	"notes" : "Lots of coding",
+	"projectId" : 3424,
+	"contractId" : null,
+	"internalCodeId" : null,
+	"project" : "1003 - The Coding Project",
+	"contract" : "",
+	"internalCode" : "" 
+}]
+```
+
 * `* GET v1/timesheets/projectactivites` Returns all the project activity codes for the client
 
 ```javascript
@@ -132,5 +184,9 @@ Use Timesheets to manage timesheet entries for the logged in user
 	"result" : true
 }
 ```
+
+* `* POST - v1/timesheets/AddRow?week&projectId&internalCodeId` Adds a project or internal code to the users timesheet week. Supply either the projectId or internalCodeId but not both
+
+* `* DELETE - v1/timesheets/RemoveRow?week&projectId&internalCodeId` Removes a project or internal code from the users timesheet week. Supply either the projectId or internalCodeId but not both
 
 * `* POST v1/timesheets/submit` Submits the current users timesheet week
