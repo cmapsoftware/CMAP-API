@@ -33,7 +33,7 @@ Use contacts to list, view or search for contacts within CMAP
 				"Address2" : "",
 				"Address3" : "",
 				"TownCity" : "Manchester",
-				'CountyState" : "Greater Manchester",
+				"CountyState" : "Greater Manchester",
 				"Postcode" : "M22 4TG" 
 				}
 }]
@@ -49,5 +49,26 @@ Use contacts to list, view or search for contacts within CMAP
 	"company" : "Smith Industries",
 	"id" : "3534",
 	"name" : "Mike Jones"
+}]
+```
+
+* `* GET v1/Contacts?email=email&name=name` Returns all the contacts that match the email address or name specified
+```javascript
+[{
+ 	"id" = "3455",
+	"firstName" = "John",
+	"lastName" = "Smith",
+	"companyId" = "56546",
+	"jobTitle" = "CEO",
+	"directPhone" = "01625 521 000",
+	"mobilePhone" = "07966 000 999",
+	"emailAddress" = "john.smith@noreply.com",
+	"contactOwner" = "",
+	"mainContact" = true,
+	"accountsContact" = false,
+	"notes" = "",
+	"company" = "No Reply Ltd",
+	"name" = "John Smith",
+	"matchingEmail" = "john.smith@noreply.com"
 }]
 ```
