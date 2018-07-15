@@ -41,6 +41,27 @@ Use activities to manage activities in CMAP
   }
 ```
 
+* `* GET - v1/Activities/?contactId=34534` Returns all the activities logged for the specified contact
+
+```javascript
+[{ "id" = "123", 
+  "companyId" = "434532", 
+  "company" = "ABC Pharma", 
+  "contactId" = "34534", 
+  "contactName" = "Matt Smith", 
+  "details" = "The information about the activity", 
+  "documentId" = "0000-0000-00000-0000", 
+  "documentName" = "Activity.xlsx", 
+  "dueDate" = "2017-01-01", 
+  "isCompleted" = false
+  "projectId" = "7987", 
+  "projectTitle" = "10001 - Website Design", 
+  "type" = "Meeting", 
+  "typeId" = "3"
+  }]
+```
+
+
 * `* DELETE v1/Activities/5` Deletes an activity 
 ``` javascript 
 { 
