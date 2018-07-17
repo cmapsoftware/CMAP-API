@@ -14,7 +14,7 @@ Request a token for a CMAP user to make further requests to the API. Once a toke
 ```
 
 ## POST Forgot Password
-* `POST v1/Auth/ForgotPassword` submits a forgotten password message for the supplied details
+* `POST v1/Auth/ForgotPassword` submits a forgotten password message for the supplied details. The subdomain is optional and you are able to just submit the username.
 ```javascript
 {
 	"username":"[user's cmap username]",
