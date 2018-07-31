@@ -41,7 +41,7 @@ Use activities to manage activities in CMAP
   }
 ```
 
-* `* GET - v1/Activities/?contactId=34534` Returns all the activities logged for the specified contact
+* `* GET - v1/Activities/?contactId=34534&open=true` Returns all the activities logged for the specified contact and whether you want open or completed activities
 
 ```javascript
 [{ "id" = "123", 
