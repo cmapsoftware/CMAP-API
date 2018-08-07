@@ -38,7 +38,25 @@ Use projects to search for projects within CMAP
 ```
 
 ## Get Contact Projects
-* `* GET v1/projects/?status=[status]&contactId=876` Returns all the projects associated with a contact. The status of the project can be `potential` or `project` or `closed`
+* `* GET v1/projects/?status=[status]&contactId=876` Returns all the projects associated with a contact. The status of the project can be `potential` or `project` or `closed` or 'lead' or 'rfp'
+
+```javascript
+[{
+	"id" : "7867"
+	"code" : "34543",
+	"title" : "Onboarding Project"
+	"fee" : £57899
+},
+{
+	"id" : "4356"
+	"code" : "45656",
+	"title" : "Development Project"
+	"fee" : £89789
+}]
+```
+
+## Get Company Projects
+* `* GET v1/projects/?status=[status]&companyId=823423` Returns all the projects associated with a contact. The status of the project can be `potential` or `project` or `closed` or 'lead' or 'rfp'
 
 ```javascript
 [{
