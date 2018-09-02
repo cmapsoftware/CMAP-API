@@ -14,7 +14,9 @@ Use Timesheets to manage timesheet entries for the logged in user
 	"internalCodeId" : null,
 	"project" : "1003 - The Coding Project",
 	"contract" : "",
-	"internalCode" : "" 
+	"internalCode" : "",
+	"taskId" : 34534,
+	"roleId" : 4234
 }]
 ```
 
@@ -32,7 +34,9 @@ Use Timesheets to manage timesheet entries for the logged in user
 	"internalCodeId" : null,
 	"project" : "1003 - The Coding Project",
 	"contract" : "",
-	"internalCode" : "" 
+	"internalCode" : "",
+	"taskId" : 34534,
+	"roleId" : 4234
 }]
 ```
 
@@ -48,7 +52,9 @@ Use Timesheets to manage timesheet entries for the logged in user
 	"contractId" : null,
 	"internalCodeId" : 456456,
 	"project" : "",
-	"internalCode" : "Internal Meeting" 
+	"internalCode" : "Internal Meeting",
+	"taskId" : 34534,
+	"roleId" : 4234 
 }]
 ```
 
@@ -66,7 +72,9 @@ Use Timesheets to manage timesheet entries for the logged in user
 	"internalCodeId" : null,
 	"project" : "1003 - The Coding Project",
 	"contract" : "",
-	"internalCode" : "" 
+	"internalCode" : "",
+	"taskId" : 34534,
+	"roleId" : 4234
 }]
 ```
 
