@@ -78,7 +78,7 @@ Use Timesheets to manage timesheet entries for the logged in user
 }]
 ```
 
-* `* GET v1/timesheets/projectactivites` Returns all the project activity codes for the client
+* `* GET v1/timesheets/projectactivities` Returns all the project activity codes for the client
 
 ```javascript
 [
