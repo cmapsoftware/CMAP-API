@@ -98,3 +98,5 @@ Use activities to manage activities in CMAP
    Details:'The details of the activity'
 }
 ```
+
+* `* PUT v1/Activities/2134/status?completed=true|false` Updates an activity status. Pass either true or false for the completed flag
