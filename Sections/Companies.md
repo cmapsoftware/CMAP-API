@@ -33,3 +33,17 @@ Use companies to list, view or search for companies within CMAP
 	"name" : "Smith Corp."
 }]
 ```
+
+* `* GET v1/Companies/5/Addresses` Returns all addresses associated with a company
+```javascript
+[{
+	"AddressID" : 32432,
+	"Description" : "Manchester Headquarters",
+	"Address1" : "5 Hope Street",
+	"Address2" : "",
+	"Address3" : "",
+	"TownCity" : "Manchester",
+	"CountyState" : "Greater Manchester",
+	"Postcode" : "M22 4TG"
+}]
+```
