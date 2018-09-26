@@ -73,18 +73,6 @@ Use contacts to list, view or search for contacts within CMAP
 }]
 ```
 
-* `* GET v1/Companies/5/Addresses` Returns all addresses associated with a company
-[{
-"AddressID" : 32432,
-"Description" : "Manchester Headquarters",
-"Address1" : "5 Hope Street",
-				"Address2" : "",
-				"Address3" : "",
-				"TownCity" : "Manchester",
-				"CountyState" : "Greater Manchester",
-				"Postcode" : "M22 4TG"
-}]
-
 * `* POST v1/Contacts` Creates a new client in CMAP
 ```javascript
 {
