@@ -72,3 +72,20 @@ Use contacts to list, view or search for contacts within CMAP
 	"matchingEmail" = "john.smith@noreply.com"
 }]
 ```
+
+* `* POST v1/Contacts` Creates a new client in CMAP
+```javascript
+{
+	"firstName" : "Robert",
+	"lastName" : "Smith",
+	"companyId" : 12456,
+	"jobTitle" : "Managing Director",
+	"telephone" : "01625 521 000",
+	"mobile" : "07799 876543",
+	"email" : "robert.smith@abc.com",
+	"addressId" : 324,
+	"ownerId" : 454,
+	"mainContact" : true,
+	"financeContact" : false,
+	"notes" : "Some information about this contact"
+}
