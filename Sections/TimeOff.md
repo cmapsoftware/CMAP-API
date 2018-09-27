@@ -12,6 +12,7 @@ Use TimeOff to manage holiday bookings in CMAP
 	"date" : "2015-07-01", 
 	"duration" : 2, 
 	"code" : "Holiday",
+	"codeId" : 0,
 	"notes" : "Some notes about the holiday", 
 	"rejected" : true, 
 	"requested" : true
@@ -28,6 +29,7 @@ Use TimeOff to manage holiday bookings in CMAP
 	"date" : "2015-07-01", 
 	"duration" : 2, 
 	"code" : "Holiday",
+	"codeId" : 0,
 	"notes" : "Some notes about the holiday", 
 	"rejected" : true, 
 	"requested" : true
