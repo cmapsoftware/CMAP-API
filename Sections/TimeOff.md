@@ -39,10 +39,11 @@ Use TimeOff to manage holiday bookings in CMAP
 ```javascript
 {
 	"days" : 25,
+	"daysRemaining" : 4,
 	"carriedForward" : 3,
 	"timeInLieu" = 0,
-	"allowances" = [{ "allowance":1, "code": "Birthday"},
-					{"allowance":2,"Family Time"}]
+	"allowances" = [{ "allowance":1, "allowanceRemaing" : 0, "code": "Birthday", "codeId" : 3},
+					{"allowance":2, "allowanceRemaing" : 2, "code" : "Family Time", "codeId" : 2}]
 }
 ```
 
