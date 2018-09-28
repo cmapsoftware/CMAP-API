@@ -17,7 +17,8 @@ Use activities to manage activities in CMAP
   "projectId" = "7987", 
   "projectTitle" = "10001 - Website Design", 
   "type" = "Meeting", 
-  "typeId" = "3"
+  "typeId" = "3",
+  "ownerId" = 2468
   }]
 ```
 
@@ -37,7 +38,8 @@ Use activities to manage activities in CMAP
   "projectId" = "7987", 
   "projectTitle" = "10001 - Website Design", 
   "type" = "Meeting", 
-  "typeId" = "3"
+  "typeId" = "3",
+  "ownerId" = 2468
   }
 ```
 
@@ -57,7 +59,8 @@ Use activities to manage activities in CMAP
   "projectId" = "7987", 
   "projectTitle" = "10001 - Website Design", 
   "type" = "Meeting", 
-  "typeId" = "3"
+  "typeId" = "3",
+  "ownerId" = 2468
   }]
 ```
 
