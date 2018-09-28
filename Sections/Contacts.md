@@ -89,3 +89,22 @@ Use contacts to list, view or search for contacts within CMAP
 	"financeContact" : false,
 	"notes" : "Some information about this contact"
 }
+
+
+* `* PUT v1/Contacts` Updates a new client in CMAP
+```javascript
+{
+	"contactId" : 987897
+	"firstName" : "Robert",
+	"lastName" : "Smith",
+	"companyId" : 12456,
+	"jobTitle" : "Managing Director",
+	"telephone" : "01625 521 000",
+	"mobile" : "07799 876543",
+	"email" : "robert.smith@abc.com",
+	"addressId" : 324,
+	"ownerId" : 454,
+	"mainContact" : true,
+	"financeContact" : false,
+	"notes" : "Some information about this contact"
+}
