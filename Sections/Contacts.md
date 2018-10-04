@@ -11,6 +11,17 @@ Use contacts to list, view or search for contacts within CMAP
 }]
 ```
 
+* `* GET v1/Contacts?companyId=5` Returns all contacts belonging to the company
+```javascript
+[{
+	"id" : "876876",
+	"firstName" : "Mike",
+	"lastName" : "Smith",
+	"displayName" : "Smith, Mike",
+	"email" : "mike.smith@something.com",
+}]
+```
+
 * `* GET v1/Contacts/5` Returns the contact with the matching id (if that contact exists)
 ```javascript
 [{ 
