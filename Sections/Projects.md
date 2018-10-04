@@ -6,6 +6,7 @@ Use projects to search for projects within CMAP
 
 ```javascript
 [{
+	"companyId" : "767678",
 	"company" : "Smith Industries",
 	"code" : "34543",
 	"codeAndTitle" : "34543 - New Project",
@@ -13,6 +14,7 @@ Use projects to search for projects within CMAP
 	"title" : "New Project"
 },
 {
+	"companyId" : "767668",
 	"company" : "Smith Corp",
 	"code" : "10001",
 	"codeAndTitle" : "10001 - Website Project",
