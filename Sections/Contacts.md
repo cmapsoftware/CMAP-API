@@ -55,11 +55,15 @@ Use contacts to list, view or search for contacts within CMAP
 [{
 	"company" : "Smith Industries",
 	"id" : "876876",
-	"name" : "Mike Smith"
+	"name" : "Mike Smith",
+	"email" : "mike.smith@smith.inc",
+	"jobTitle" : "Manager"
 	},{
 	"company" : "Smith Industries",
 	"id" : "3534",
-	"name" : "Mike Jones"
+	"name" : "Mike Jones",
+	"email" : "mike.jones@smith.inc",
+	"jobTitle" : "Deputy Manager"
 }]
 ```
 
