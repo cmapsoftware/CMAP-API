@@ -16,15 +16,17 @@ Use resources to return various helper items used throughout the system
 }]
 ```
 
-* `* GET v1/resources/expensecategories` Returns the available expenses categories that expense items can be booked to
+* `* GET v1/resources/expensecategories` Returns the available expenses categories that expense items can be booked to, and the default VAT rate id if applicable
 
 ```javascript
 [{ 
 	"id" : "12",
-	"name" : "Accommodation"
+	"name" : "Accommodation",
+	"defaultVatRateId": "13"
 },{ 
 	"id" : "13",
-	"name" : "Train Tickets"
+	"name" : "Train Tickets",
+	"defaultVatRateId": ""
 }]
 ```
 
