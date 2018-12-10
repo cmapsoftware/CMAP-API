@@ -111,3 +111,18 @@ Use resources to return various helper items used throughout the system
 	"name" : "Telephone Call"	
 }]
 ```
+
+* `* GET v1/resources/expensebillingtypes` Returns the list of billing types related to expenses
+
+```javascript
+[{ 
+	"id" : "1",
+	"name" : "Charge"	
+},{ 
+	"id" : "2",
+	"name" : "No Charge"	
+},{ 
+	"id" : "3",
+	"name" : "Allowance"	
+}]
+```

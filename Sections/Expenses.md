@@ -134,6 +134,8 @@ Use expenses to record your personal and project expenses in CMAP
 	"Receipt" : "true",
 	"VATRateID" : "1",
 	"AccountID" : "34", /* supplier id */
+	"BillingTypeID", "1", /* Get from /resources/expensebillingtypes */
+	"BudgetExternalID", "65", /* Get from /budgets/6/externals */
 	"ReceiptImage" : "" /* a base64 string representation of a jpg image */
 }
 ```
@@ -159,6 +161,8 @@ Use expenses to record your personal and project expenses in CMAP
 	"Receipt" : "true",
 	"VATRateID" : "1",
 	"AccountID" : "34", /* supplier id */
+	"BillingTypeID", "1", /* Get from /resources/expensebillingtypes */
+	"BudgetExternalID", "65", /* Get from /budgets/6/externals */
 	"ReceiptImage" : "" /* a base64 string representation of a jpg image */
 }
 ```
