@@ -122,6 +122,7 @@ Use expenses to record your personal and project expenses in CMAP
 	"ExpenseCategoryID" : "45", /* 0 for mileage claim items */
 	"ContractID" : "5", /* only used when the expense claim is for a contract */
 	"ProjectID" : "6", /* only used when the expense claim is for a project */
+	"InternalCodeID" : "7", /* only used when the expense claim is for an internal code */
 	"ClaimDate" : "2015-06-01",
 	"Mileage" : "100", /* used when a mileage claim item, nullable */
 	"MileageRateID" : "78", /* used when a mileage claim item, nullable */
@@ -146,6 +147,7 @@ Use expenses to record your personal and project expenses in CMAP
 	"ExpenseCategoryID" : "45", /* 0 for mileage claim items */
 	"ContractID" : "5", /* only used when the expense claim is for a contract */
 	"ProjectID" : "6", /* only used when the expense claim is for a project */
+	"InternalCodeID" : "7", /* only used when the expense claim is for an internal code */
 	"ClaimDate" : "2015-06-01",
 	"Mileage" : "100", /* used when a mileage claim item, nullable */
 	"MileageRateID" : "78", /* used when a mileage claim item, nullable */

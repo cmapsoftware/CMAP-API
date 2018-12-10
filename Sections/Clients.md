@@ -7,6 +7,9 @@ Use clients to retrieve information about a client, for example what features th
 {
   "Timesheets" = true,
   "TimesheetRolePicker" = true,
-  "TimesheetWorkActivities": false
+  "TimesheetWorkActivities": false,
+  "TimesheetAdditionalTime" = false,
+  "TimesheetWorkingHoursEnforcement" = true,
+  "ExpenseHandling" = false
 }
 ```
