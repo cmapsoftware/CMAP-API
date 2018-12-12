@@ -109,7 +109,7 @@ Use contacts to list, view or search for contacts within CMAP
 * `* PUT v1/Contacts` Updates a new client in CMAP
 ```javascript
 {
-	"contactId" : 987897
+	"contactId" : 987897,
 	"firstName" : "Robert",
 	"lastName" : "Smith",
 	"companyId" : 12456,
