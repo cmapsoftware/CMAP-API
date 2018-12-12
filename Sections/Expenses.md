@@ -2,7 +2,9 @@
 Use expenses to record your personal and project expenses in CMAP
 
 ## Get Expense Claims
-* `GET v1/expenses` Returns all the expense claims for the logged in user
+
+* `GET v1/expenses` Returns the 5 most recent expense claims for the logged in user
+* `GET v1/expenses?page=2&claimsPerPage=10` Returns the second page of expense claims, ordered by most recent and showing 10 items per page, for the logged in user
 
 ```json
 [{
