@@ -2,6 +2,26 @@
 Use projects to search for projects within CMAP
 
 ## Get Projects
+* `* GET v1/projects/?type=[expenses|timesheets]&q=[query]` Returns the projects that match search query. Type can be `expenses` or `timesheets`. This returns projects for the user that are available for the to book time to on their timesheets and book expenses against.
+
+```javascript
+[{
+	"ProjectId" : "767678",
+	"AccountName" : "Smith Industries",
+	"Code" : "34543",
+	"Title" : "34543 - New Project",
+	"StatusId" : "3" //1 = Potential, 3 = Live Project, 4 = Closed Project
+},
+{
+	"ProjectId" : "767678",
+	"AccountName" : "Smith Industries",
+	"Code" : "34543",
+	"Title" : "34543 - New Project",
+	"StatusId" : "3" //1 = Potential, 3 = Live Project, 4 = Closed Project
+}]
+```
+
+## Get Projects
 * `* GET v1/projects/?status=[status]&q=[query]` Returns the projects that match search query and status. Status can be `potential` or `project` or `closed`
 
 ```javascript
