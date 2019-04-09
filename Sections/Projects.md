@@ -119,3 +119,23 @@ Use projects to search for projects within CMAP
         "Total Project Value" : 0 
 }
 ```
+## POST Create Project
+* `* POST v1/projects` Create a new Project in CMAP
+
+```javascript
+{
+  "Title":"Awesome New Opportunity",
+  "Company":"Awesome Inc",
+  "Contact":"Dave Awesome",
+  "Stage":"",
+  "Probability":"50",
+  "StartDate":"2019-01-01",
+  "EndDate":"2019-12-31",
+  "Sector":"Creative",
+  "ProjectType":"CMAP Services",
+  "LeadSource":"Email",
+  "ProjectManager":"Gary Thickett",
+  "Owner":"Gary Thickett",
+  "ExternalRef":"50345-sdf",              
+}
+```
