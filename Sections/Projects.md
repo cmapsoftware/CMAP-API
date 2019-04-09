@@ -119,7 +119,7 @@ Use projects to search for projects within CMAP
         "Total Project Value" : 0 
 }
 ```
-## POST Create Project
+## Create Potential Project
 * `* POST v1/projects` Create a new Project in CMAP
 
 ```javascript
