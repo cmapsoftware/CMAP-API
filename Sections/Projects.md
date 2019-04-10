@@ -119,6 +119,31 @@ Use projects to search for projects within CMAP
         "Total Project Value" : 0 
 }
 ```
+## Get Projects Updated Between Date Range
+* `* GET v1/projects/update?from=2019-01-01&to=2019-01-31` Returns the details for projects updated between the from and to dates
+
+```javascript
+{ 
+	"Title", "Smith Industries"
+        "Code", "34543",
+        "Status", "Potential",
+        "Contact", "John Smith",
+        "Stage", "Initial Lead",
+        "Probability", 10,
+        "EstimatedPrice", 10000,
+        "StartDate", "01/01/2017T00:00:00",
+        "EndDate", "01/01/2018T00:00:00",
+        "FeeType", "Fixed Fee",
+        "Sector", "Health",
+        "ProjectType", "Strategy",
+        "LeadSource", "Existing Client",
+        "Owner", "Jane Smith",
+        "Private", "No"
+        "Bio", ""
+        "Total Project Value" : 0 
+}
+```
+
 ## Create Potential Project
 * `* POST v1/projects` Create a new Project in CMAP
 
