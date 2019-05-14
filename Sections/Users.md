@@ -56,15 +56,15 @@ Use users to list all users or search for users
 ```javascript
 [{
 	"userId": 123456,
-    "firstname": "Arthur",
-    "lastname": "Dent",
-    "locale": "en-gb",
-    "timesheetWeek": "2019-07-22T00:00:00",
-    "timeZone": "GMT Standard Time",
-    "currencyId": 2,
-    "currency": "United States Dollars",
-    "currencyAbbreviated": "USD",
-    "workingHours": 37.5,
-    "dateFormat": "dd-mm-yy"
+	"firstname": "Arthur",
+	"lastname": "Dent",
+	"locale": "en-gb",
+	"timesheetWeek": "2019-07-22T00:00:00",
+	"timeZone": "GMT Standard Time",
+	"currencyId": 2,
+	"currency": "United States Dollars",
+	"currencyAbbreviated": "USD",
+	"workingHours": 37.5,
+	"dateFormat": "dd-mm-yy"
 }]
 ```
