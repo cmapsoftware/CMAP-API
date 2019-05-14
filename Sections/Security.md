@@ -1,7 +1,6 @@
 # Security
 Use security to check whether the logged in user has access to certain permissions based on their Security Group
 
-## Get Features
 * `* POST v1/Security/HasPermission` Given an array of the security permissions required (SecurityID and valid permissions supplied by CMAP Software as needed)
 ```javascript
 [
