@@ -120,7 +120,7 @@ Use projects to search for projects within CMAP
 }
 ```
 ## Get Projects Updated Between Date Range
-* `* GET v1/projects/update?from=2019-01-01&to=2019-01-31` Returns the details for projects updated between the from and to dates
+* `* GET v1/projects/updated?from=2019-01-01&to=2019-01-31` Returns the details for projects updated between the from and to dates
 
 ```javascript
 { 
