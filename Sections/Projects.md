@@ -6,14 +6,14 @@ Use projects to search for projects within CMAP
 
 ```javascript
 [{
-	"ProjectId" : "767678",
+	"Id" : "767678",
 	"AccountName" : "Smith Industries",
 	"Code" : "34543",
 	"Title" : "34543 - New Project",
 	"StatusId" : "3" //1 = Potential, 3 = Live Project, 4 = Closed Project
 },
 {
-	"ProjectId" : "767678",
+	"Id" : "767678",
 	"AccountName" : "Smith Industries",
 	"Code" : "34543",
 	"Title" : "34543 - New Project",
@@ -145,7 +145,7 @@ Use projects to search for projects within CMAP
 ```
 
 ## Create Potential Project
-* `* POST v1/projects` Create a new Project in CMAP
+* `* POST v1/project` Create a new Project in CMAP
 
 ```javascript
 {
