@@ -7,10 +7,26 @@ Use budgets to return budget specific data for a client or project
 ```javascript
 [{ 
 	"id" : "16",
-	"name" : "Additional Fees"	
+	"name" : "Additional Fees",
+	"workstageId": 6522501,
+	"isWorkstageClosed": false,
+	"costPrice": "20000.00",
+	"salePrice": "20000.00",
+	"actualPrice": "25000.00",
+	"projectId": 456784,
+	"billingType": "Bill as Scheduled",
+	"calculationType": "Fixed Fee"
 },{ 
 	"id" : "17",
-	"name" : "Reimbursable Travel Expenses"	
+	"name" : "Reimbursable Travel Expenses",
+	"workstageId": 6522501,
+	"isWorkstageClosed": false,
+	"costPrice": "20000.00",
+	"salePrice": "20000.00",
+	"actualPrice": "25000.00",
+	"projectId": 456784,
+	"billingType": "Bill as Scheduled",
+	"calculationType": "Fixed Fee"
 }]
 ```
 
