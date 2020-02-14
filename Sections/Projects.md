@@ -10,14 +10,36 @@ Use projects to search for projects within CMAP
 	"AccountName" : "Smith Industries",
 	"Code" : "34543",
 	"Title" : "34543 - New Project",
-	"StatusId" : "3" //1 = Potential, 3 = Live Project, 4 = Closed Project
+	"StatusId" : "3", //1 = Potential, 3 = Live Project, 4 = Closed Project
+	"IsContract": false,
+	"projectManager": {
+		"id": 12345,
+		"name": "John Smith",
+		"email": "john.smith@company.com"
+	},
+	"owner": {
+		"id": 12345,
+		"name": "John Smith",
+		"email": "john.smith@company.com"
+	}
 },
 {
 	"Id" : "767678",
 	"AccountName" : "Smith Industries",
 	"Code" : "34543",
 	"Title" : "34543 - New Project",
-	"StatusId" : "3" //1 = Potential, 3 = Live Project, 4 = Closed Project
+	"StatusId" : "3", //1 = Potential, 3 = Live Project, 4 = Closed Project,
+	"IsContract": false,
+	"projectManager": {
+		"id": 12345,
+		"name": "John Smith",
+		"email": "john.smith@company.com"
+	},
+	"owner": {
+		"id": 12345,
+		"name": "John Smith",
+		"email": "john.smith@company.com"
+	}
 }]
 ```
 
