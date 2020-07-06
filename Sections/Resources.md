@@ -126,3 +126,19 @@ Use resources to return various helper items used throughout the system
 	"name" : "Allowance"	
 }]
 ```
+
+* `* GET v1/resources/clientholidaycodes` Returns the list of client holiday codes
+
+```javascript
+[{ 
+	"id" : "1",
+	"code" : "Sickness",
+	"officeId" : "1",
+	"officeName" : "UK"
+},{ 
+	"id" : "2",
+	"code" : "Training",
+	"officeId" : "1",
+	"officeName" : "UK"	
+}]
+```
