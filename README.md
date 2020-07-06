@@ -15,6 +15,7 @@ Before your app can request data from CMAP's API you must obtain a consumer key 
 - [Clients](https://github.com/jmedialtd/CMAP-API/blob/master/Sections/Clients.md)
 - [Companies](https://github.com/jmedialtd/CMAP-API/blob/master/Sections/Companies.md)
 - [Contacts](https://github.com/jmedialtd/CMAP-API/blob/master/Sections/Contacts.md)
+- [Custom Fields](https://github.com/jmedialtd/CMAP-API/blob/master/Sections/CustomFields.md)
 - [Expenses](https://github.com/jmedialtd/CMAP-API/blob/master/Sections/Expenses.md)
 - [Favourites](https://github.com/jmedialtd/CMAP-API/blob/master/Sections/Favourites.md)
 - [Projects](https://github.com/jmedialtd/CMAP-API/blob/master/Sections/Projects.md)
