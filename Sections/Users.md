@@ -68,3 +68,45 @@ Use users to list all users or search for users
 	"dateFormat": "dd-mm-yy"
 }]
 ```
+* `* POST v1/users` Creates a User in CMAP
+
+```javascript
+{
+"Firstname":"David",
+"Lastname":"Smith",
+"Email":"david.smith@abccorp.com",
+"StartDate":"2020-01-01", /* must be in this format*/
+"Status":"Employee",
+"Office":"UK",
+"Team":"Manchester",
+"JobTitle":"Architect",
+"DefaultRole":"Architect",
+"Currency":"GBP",
+"WorkingHours":"37.5",
+"LineManager":"brian.davies@abccorp.com", /* must be an email address */
+"TimeOffApprover":"brian.davies@abccorp.com", /* must be an email address */
+"ExpenseApprover":"brian.davies@abccorp.com" /* must be an email address */
+}
+```
+
+* `* PUT v1/users` Updates a User in CMAP
+
+```javascript
+{
+"UserID":"12345",
+"Firstname":"David",
+"Lastname":"Smith",
+"Email":"david.smith@abccorp.com",
+"StartDate":"2020-01-01", /* must be in this format*/
+"Status":"Employee",
+"Office":"UK",
+"Team":"Manchester",
+"JobTitle":"Architect",
+"DefaultRole":"Architect",
+"Currency":"GBP",
+"WorkingHours":"37.5",
+"LineManager":"brian.davies@abccorp.com", /* must be an email address */
+"TimeOffApprover":"brian.davies@abccorp.com", /* must be an email address */
+"ExpenseApprover":"brian.davies@abccorp.com" /* must be an email address */
+}
+```
