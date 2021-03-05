@@ -44,6 +44,28 @@ Use companies to list, view or search for companies within CMAP
 }]
 ```
 
+* `* PUT v1/Companies/` Creates the Company and returns the Id
+```javascript
+[{ 
+	"accountId":"5",
+	"name" : "Smith Industries",
+	"telephone" : "01625 521 000",
+	"website" : "http://www.smithindustries.com",
+	"fax" : "01625 521 001",
+	"paymentDays": "30",
+	"notes" : "Some information about this company",
+	"addresses" : [{
+		"description":"HQ",
+		"address1":"1 Hope Street",
+		"address2":"",
+		"address3":"",
+		"townCity":"Manchester",
+		"countyState":"Greater Manchester",
+		"postcode":"M22 4TG"
+	}]
+}]
+```
+
 * `* GET v1/Companies?q=[query]` Returns all companies that match the search query
 ```javascript
 [{
