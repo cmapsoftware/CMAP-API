@@ -44,7 +44,7 @@ Use companies to list, view or search for companies within CMAP
 }]
 ```
 
-* `* PUT v1/Companies/` Creates the Company and returns the Id
+* `* PUT v1/Companies/` Updates the Company and any existing addresses, and adds any new addresses, and returns the Id
 ```javascript
 [{ 
 	"accountId":"5",
@@ -54,15 +54,27 @@ Use companies to list, view or search for companies within CMAP
 	"fax" : "01625 521 001",
 	"paymentDays": "30",
 	"notes" : "Some information about this company",
-	"addresses" : [{
-		"description":"HQ",
-		"address1":"1 Hope Street",
-		"address2":"",
-		"address3":"",
-		"townCity":"Manchester",
-		"countyState":"Greater Manchester",
-		"postcode":"M22 4TG"
-	}]
+	"addresses" : [
+		{
+			"addressId": 12345,
+			"description":"HQ",
+			"address1":"1 Hope Street",
+			"address2":"",
+			"address3":"",
+			"townCity":"Manchester",
+			"countyState":"Greater Manchester",
+			"postcode":"M22 4TG"
+		},
+		{
+			"description":"New Address",
+			"address1":"2 Hope Street",
+			"address2":"",
+			"address3":"",
+			"townCity":"Manchester",
+			"countyState":"Greater Manchester",
+			"postcode":"M22 4TG"
+		}
+	]
 }]
 ```
 
