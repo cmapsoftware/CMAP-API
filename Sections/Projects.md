@@ -167,7 +167,7 @@ Use projects to search for projects within CMAP
 ```
 
 ## Create Potential Project
-* `* POST v1/project` Create a new Potential Project in CMAP. Note that if `FixedFee` is supplied as a `FeeType` then the Project will be created as a Live project and not a potential project. Any Custom Field create for the Live Project page can be specified in the `CustomFields` area with the field name and value, and these will be set when the new project is created.
+* `* POST v1/project` Create a new Potential Project in CMAP. Note that if `Architectural` is supplied as a `FeeType` then the Project will be created as a Live project and not a potential project. Any Custom Field created on the Live Project page can be specified in the `CustomFields` area with the field name and value, and these will be set when the new project is created.
 
 ```javascript
 {
