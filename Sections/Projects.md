@@ -167,14 +167,15 @@ Use projects to search for projects within CMAP
 ```
 
 ## Create Potential Project
-* `* POST v1/project` Create a new Project in CMAP
+* `* POST v1/project` Create a new Potential Project in CMAP. Note that if `FixedFee` is supplied as a `FeeType` then the Project will be created as a Live project and not a potential project. Any Custom Field create for the Live Project page can be specified in the `CustomFields` area with the field name and value, and these will be set when the new project is created.
 
 ```javascript
 {
   "Title":"Awesome New Opportunity",
   "Company":"Awesome Inc",
   "Contact":"Dave Awesome",
-  "Stage":"",
+  "Email": "email@email.com"
+  "Stage":"Project Stage 1",
   "Probability":"50",
   "StartDate":"2019-01-01",
   "EndDate":"2019-12-31",
@@ -183,6 +184,20 @@ Use projects to search for projects within CMAP
   "LeadSource":"Email",
   "ProjectManager":"Gary Thickett",
   "Owner":"Gary Thickett",
+  "FeeType": "FixedFee" | "Architectural" | "PureTimeMaterials" | "ResourcedTimeMaterials" | "Syndication" | "Retainer",
+  "EsimatedPrice": 1000000,
   "ExternalRef":"50345-sdf",              
+  "CustomFields" : {
+	  "TextField": "Custom Field Text",
+	  "TextAreaField": "Custom Field TextArea",
+	  "DropdownField": "Item 1",
+	  "DateField": "2019-12-31",
+	  "YesNoField": "Yes" | "No",
+	  "MultiLevelDropdownField": ["Item 1", "Item 1a", "Item 1aa"],
+	  "MultiSelectField": ["Item 1", "Item 3", "Item 4"],
+	  "UserDropdownField": "Gary Thickett",
+	  "UserMultiselectDropdownField": ["First User", "Second User", "Third User"],
+	  "NumberField": 1234567.89
+  }
 }
 ```
