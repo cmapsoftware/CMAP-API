@@ -72,7 +72,7 @@ Use activities to manage activities in CMAP
 }
 ```
 
-* `* POST v1/Activities` Creates an activity. AccountID is required for any activity record regardless of what type of entity the activity is associated to. `EntityType` must be one of the following options: Account, Contact, Project, Lead, or RFP. `ActivityTypeID` should be one of the following: 1 = Note, 2 = Telephone Call, 3 = Meeting, 4 = Email, 5 = Document, 6 = Letter, 7 = Email Campaign, 8 = New Sales Meeting, 9 = Followup Meeting, 10 = Project Deadline
+* `* POST v1/Activities` Creates an activity. AccountID is required for any activity record regardless of what type of entity the activity is associated to. `EntityType` must be one of the following options: Account, Contact, Project, Lead, or RFP. `ActivityCategoryID` can be obtained by sending a GET request to /v1/Resources/ActivityCategories.
 ``` javascript
 {
    AccountID:210954,
@@ -80,14 +80,16 @@ Use activities to manage activities in CMAP
    UserID:2468,
    EntityType:'Contact',
    EntityID:61471,
+   ActivityCategoryID:466,
    ActivityTypeID:1,
    IsCompleted:false,
-   Details:'The details of the activity'
+   Details:'The details of the activity',
+   Notes: 'Some notes for the activity'
 }
 ```
 
 
-* `* PUT v1/Activities` Updates an activity.  AccountID is required for any activity record regardless of what type of entity the activity is associated to. `EntityType` must be one of the following options: Account, Contact, Project, Lead, or RFP. `ActivityTypeID` should be one of the following: 1 = Note, 2 = Telephone Call, 3 = Meeting, 4 = Email, 5 = Document, 6 = Letter, 7 = Email Campaign, 8 = New Sales Meeting, 9 = Followup Meeting, 10 = Project Deadline
+* `* PUT v1/Activities` Updates an activity.  AccountID is required for any activity record regardless of what type of entity the activity is associated to. `EntityType` must be one of the following options: Account, Contact, Project, Lead, or RFP. `ActivityCategoryID` can be obtained by sending a GET request to /v1/Resources/ActivityCategories.
 ``` javascript
 {
    ActivityID: 2344,
@@ -96,9 +98,10 @@ Use activities to manage activities in CMAP
    UserID:2468,
    EntityType:'Contact',
    EntityID:61471,
-   ActivityTypeID:1,
+   ActivityCategoryID:466,
    IsCompleted:false,
-   Details:'The details of the activity'
+   Details:'The details of the activity',
+   Notes: 'Some notes for the activity'
 }
 ```
 
