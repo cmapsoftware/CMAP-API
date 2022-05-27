@@ -70,6 +70,9 @@ Use users to list all users or search for users
 ```
 * `* POST v1/users` Creates a User in CMAP
 
+To specify data for Dropdown Lists, Multi-Select Dropdown Lists, Multi-Select Dropdown Lists with Score the dropdown options must be setup in CMap first.
+
+To specify data for the User Dropdown List or User Multi-Select Dropdown Lists, the user's UserID is required.
 ```javascript
 {
 "Firstname":"David",
@@ -86,10 +89,35 @@ Use users to list all users or search for users
 "LineManager":"brian.davies@abccorp.com", /* must be an email address */
 "TimeOffApprover":"brian.davies@abccorp.com", /* must be an email address */
 "ExpenseApprover":"brian.davies@abccorp.com" /* must be an email address */
+"CustomFields" : 
+	{
+        "SampleTextField": "Example Text",
+        "SampleNumberField": 12345.67,
+        "SampleDropdownList": "Item 1",
+        "SampleDateField": "2022-05-27",
+        "SampleYesNo": true | false,
+        "SampleMultiLineTextField": "A longer piece of text",
+        "SampleMultiSelectDropdown": ["Item 1", "Item 2", "Item 4"],
+        "SampleMultiSelectWithScore": [
+            {
+                "Option" : "Item 1",
+                "Score": 25
+            },
+            {
+                "Option" : "Item 3",
+                "Score": 75
+            }
+        ],
+        "SampleUserDropdownList": 130889,
+        "SampleUserMultiSelectDropdownList": [130889, 133900]
+    }
 }
 ```
 
 * `* PUT v1/users` Updates a User in CMAP
+To specify data for Dropdown Lists, Multi-Select Dropdown Lists, Multi-Select Dropdown Lists with Score the dropdown options must be setup in CMap first.
+
+To specify data for the User Dropdown List or User Multi-Select Dropdown Lists, the user's UserID is required.
 
 ```javascript
 {
@@ -108,5 +136,27 @@ Use users to list all users or search for users
 "LineManager":"brian.davies@abccorp.com", /* must be an email address */
 "TimeOffApprover":"brian.davies@abccorp.com", /* must be an email address */
 "ExpenseApprover":"brian.davies@abccorp.com" /* must be an email address */
+"CustomFields" : 
+	{
+        "SampleTextField": "Example Text",
+        "SampleNumberField": 12345.67,
+        "SampleDropdownList": "Item 1",
+        "SampleDateField": "2022-05-27",
+        "SampleYesNo": true | false,
+        "SampleMultiLineTextField": "A longer piece of text",
+        "SampleMultiSelectDropdown": ["Item 1", "Item 2", "Item 4"],
+        "SampleMultiSelectWithScore": [
+            {
+                "Option" : "Item 1",
+                "Score": 25
+            },
+            {
+                "Option" : "Item 3",
+                "Score": 75
+            }
+        ],
+        "SampleUserDropdownList": 130889,
+        "SampleUserMultiSelectDropdownList": [130889, 133900]
+    }
 }
 ```
