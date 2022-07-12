@@ -11,17 +11,6 @@ Use contacts to list, view or search for contacts within CMAP
 }]
 ```
 
-* `* GET v1/Contacts?companyId=5` Returns all contacts belonging to the company
-```javascript
-[{
-	"id" : "876876",
-	"firstName" : "Mike",
-	"lastName" : "Smith",
-	"displayName" : "Smith, Mike",
-	"email" : "mike.smith@something.com",
-}]
-```
-
 * `* GET v1/Contacts/5` Returns the contact with the matching id (if that contact exists)
 ```javascript
 [{ 
@@ -47,6 +36,39 @@ Use contacts to list, view or search for contacts within CMAP
 				"CountyState" : "Greater Manchester",
 				"Postcode" : "M22 4TG" 
 				}
+}]
+```
+
+* `* GET v1/Contacts?companyId=5` Returns all contacts belonging to the company
+```javascript
+[{
+	"id" : "876876",
+	"firstName" : "Mike",
+	"lastName" : "Smith",
+	"displayName" : "Smith, Mike",
+	"email" : "mike.smith@something.com",
+}]
+```
+
+* `* GET v1/Contacts/ActiveContactsForCompany?companyId=5` Returns all active contacts belonging to the company
+```javascript
+[{
+	"id" : "876876",
+	"firstName" : "Mike",
+	"lastName" : "Smith",
+	"displayName" : "Smith, Mike",
+	"email" : "mike.smith@something.com",
+}]
+```
+
+* `* GET v1/Contacts/HistoricContactsForCompany?companyId=5` Returns all historic contacts belonging to the company
+```javascript
+[{
+	"id" : "876876",
+	"firstName" : "Mike",
+	"lastName" : "Smith",
+	"displayName" : "Smith, Mike",
+	"email" : "mike.smith@something.com",
 }]
 ```
 
@@ -104,7 +126,7 @@ Use contacts to list, view or search for contacts within CMAP
 	"financeContact" : false,
 	"notes" : "Some information about this contact"
 }
-
+```
 
 * `* PUT v1/Contacts` Updates a new client in CMAP
 ```javascript
@@ -123,3 +145,24 @@ Use contacts to list, view or search for contacts within CMAP
 	"financeContact" : false,
 	"notes" : "Some information about this contact"
 }
+```
+
+* `* PUT v1/Contacts/MoveContact` Moves a contact to a different company
+```javascript
+{
+	"contactId" : 987897
+}
+```
+
+* `* PUT v1/Contacts/UpdateContactCompanyStatus` Updates a contacts link to a company to a status of 'Active' or 'Historic'
+```javascript
+{
+	contactCompanyId = 198198,
+	contactId = 987897,
+	companyId = 876876,
+	jobTitle = "Managing Director",
+	addressId = 324,
+	isMain = true,
+	status = "Active"
+}
+```
