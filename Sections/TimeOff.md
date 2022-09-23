@@ -61,14 +61,37 @@ Use TimeOff to manage holiday bookings in CMAP
 	"daysRemaining" : 4,
 	"carriedForward" : 3,
 	"timeInLieu" = 0,
-	"allowances" = [{ "allowance":1, "allowanceRemaing" : 0, "code": "Birthday", "codeId" : 3},
-					{"allowance":2, "allowanceRemaing" : 2, "code" : "Family Time", "codeId" : 2}]
+	"allowances" = [
+		{"allowance":1, "allowanceRemaing" : 0, "code": "Birthday", "codeId" : 3},
+		{"allowance":2, "allowanceRemaing" : 2, "code" : "Family Time", "codeId" : 2}
+	]
 }
 ```
 
-* `* POST v1/TimeOff` Create a new holiday
+* `* POST v1/TimeOff` Request a new holiday. `pm` allows `true` or `false`, true indicating that this holiday will start at 12 noon. HolidayCodeId 0 indicates the standard Holiday Allowances, whereas specifying the HolidayCodeId as something other than 0 indicates a specific time off code. Returns `Success` if the holiday was successfully requested, or `Conflict` if there was already holiday requests for this time period for this user.
 
-* `* PUT v1/TimeOff/5` Update a holiday's details
+```javascript
+{
+    "Date": "2022-10-03",
+    "Duration": 5,
+    "Notes": "Optional notes about the holiday request",
+    "pm": true | false,
+    "HolidayCodeID": 0 | [HolidayCodeId]
+}
+```
+
+* `* PUT v1/TimeOff` Update a requested holiday. `pm` allows `true` or `false`, true indicating that this holiday will start at 12 noon. HolidayCodeId 0 indicates the standard Holiday Allowances, whereas specifying the HolidayCodeId as something other than 0 indicates a specific time off code. Note that HolidayID must be specified.
+
+```javascript
+{
+    "HolidayId": 123456,
+    "Date": "2022-10-03",
+    "Duration": 5,
+    "Notes": "Optional notes about the holiday request",
+    "pm": true | false,
+    "HolidayCodeID": 0 | [HolidayCodeId]
+}
+```
 
 * `* DELETE v1/TimeOff/5` Deletes a holiday
 
