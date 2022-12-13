@@ -58,6 +58,35 @@ Returns the Expense Claim for the User with the matching Expense Claim ID. `date
 }
 ```
 
+* **`GET v1/expenses/ForInvoice/{INVOICE_ID}`**
+Returns all related Expense Claim Items that are linked to the invoice specificed by `INVOICE_ID`.
+
+```json
+[{
+	"amount": 123.45,
+	"billable": 1,
+	"categoryId": 12345,
+	"categoryName": "Transport",
+	"claimId": 123456,
+	"currencyId": 1,
+	"currency": "GBP",
+	"date": "2022-12-12",
+	"description": "Meal for the client",
+	"exchangeRate": null,
+	"id": 1234567,
+	"mileage": null,
+	"mileageRateId": null,
+	"projectId": 123456,
+	"projectName": "Sample Account, 8978 - New Website Project",
+	"reimburse": true,
+	"vatRateId": 1,
+	"budgetExternalID": 1234567,
+	"chargeable": true,
+	"sageAccountCode": ""
+}]
+
+```
+
 * **`POST v1/expenses`**
 Create a new Expense Claim. This returns the ID of the new Expense Claim. To default to using Expense Claim names of the month and year in the format "Dec 2022", supply a JSON body with no name property.
 
@@ -94,6 +123,16 @@ Submit an Expense Claim for either Line Manager or Financial Manager approval de
 // Return result
 {
 	"result": "{success: true, notification: '' | success: false, notification: ''}"
+}
+```
+
+* **`v1/expenses/{EXPENSE_CLAIM_ID}/MarkAsPaid`**
+Sets an Expense Claim to be marked as the paid status.
+
+```json
+// Return Result
+{
+    "result": true
 }
 ```
 
@@ -198,7 +237,7 @@ Create a new Expense Claim Item, returning the newly created Expense Claim Item 
 	"ContractID": 12345, /* only used when the Expense Claim is for a Contract */
 	"ProjectID": 12345, /* only used when the Expense Claim is for a Project */
 	"InternalCodeID": 12345, /* only used when the Expense Claim is for an Internal Code */
-	"ClaimDate": "2015-06-01",
+	"ClaimDate": "2022-12-01",
 	"Value": 123.45,
 	"CurrencyID": 1,
 	"Description": "Description of the Expense Claim Item",
@@ -228,7 +267,7 @@ Updates an Expense Claim Item. To retrieve the list of `BillingTypeID` values, m
 	"ContractID": 123456, /* only used when the expense claim is for a contract */
 	"ProjectID": 123456, /* only used when the expense claim is for a project */
 	"InternalCodeID": 123456, /* only used when the expense claim is for an internal code */
-	"ClaimDate": "2015-06-01",
+	"ClaimDate": "2022-12-01",
 	"Mileage": 123.45,
 	"MileageRateID": 12345,
 	"CurrencyID": 1,
