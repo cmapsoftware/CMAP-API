@@ -1,57 +1,57 @@
 # Expenses
-Use expenses to record your personal and project expenses in CMAP
+Use expenses to record your personal and project expenses in CMAP.
 
 ## Get Expense Claims
 
 * **`GET v1/expenses`**
-Returns the 5 most recent expense claims for the logged in User
+Returns the 5 most recent expense claims for the logged in User.
 * **`GET v1/expenses?page={PAGE}&claimsPerPage={CLAIMS_PER_PAGE}`**
-Returns the specific page of Expense Claims specified in `PAGE`, ordered by most recent and showing the number of items per page specified in `CLAIMS_PER_PAGE`, for the logged in User
+Returns the specific page of Expense Claims specified in `PAGE`, ordered by most recent and showing the number of items per page specified in `CLAIMS_PER_PAGE`, for the logged in User.
 
 ```json
 [{
-	"expenseClaimID" : "5", 
-	"name" : "June 2015", 
-	"dateSubmitted" : "01/06/2015",
+	"expenseClaimID" : 123456, 
+	"name" : "December 2022", 
+	"dateSubmitted" : "2022-12-01",
 	"currencyID": 1,
 	"status" : "Open | FIN Rejected | MAN Rejected | Awaiting FIN Approval | Awaiting MAN Approval | Awaiting Payment | Paid"
 },
 {
-	"expenseClaimID" : "6", 
-	"name" : "July 2015", 
-	"dateSubmitted" : "01/07/2015",
+	"expenseClaimID" : 123457, 
+	"name" : "December 2022", 
+	"dateSubmitted" : "2022-12-12",
 	"currencyID": 1,
 	"status" : "Open | FIN Rejected | MAN Rejected | Awaiting FIN Approval | Awaiting MAN Approval | Awaiting Payment | Paid"
 }]
 ```
 
 * **`GET v1/expenses/?status={STATUS}`**
-Returns all the expenses for the user with the matching Expense Claim Status specified by `{STATUS}`. The options for status are `Open | FINRejected | MANRejected | AwaitingFINApproval | AwaitingMANApproval | AwaitingPayment | Paid`
+Returns all the expenses for the user with the matching Expense Claim Status specified by `{STATUS}`. The options for status are `Open | FINRejected | MANRejected | AwaitingFINApproval | AwaitingMANApproval | AwaitingPayment | Paid`. `dateSubmitted` will be null if the Expense Claim has not yet been submitted.
 
 ```json
 [{
-	"expenseClaimID" : "5", 
-	"name" : "June 2015", 
-	"dateSubmitted" : "01/06/2015", 
+	"expenseClaimID" : 123456, 
+	"name" : "December 2022", 
+	"dateSubmitted" : "2022-12-01",
 	"currencyID": 1,
 	"status" : "Open"
 },
 {
-	"expenseClaimID" : "6", 
-	"name" : "July 2015", 
-	"dateSubmitted" : "01/07/2015", 
+	"expenseClaimID" : 123457, 
+	"name" : "December 2022", 
+	"dateSubmitted" : "2022-12-12", 
 	"status" : "Open"
 }]
 ```
 
 * **`GET v1/expenses/{EXPENSE_CLAIM_ID}`**
-Returns the Expense Claim for the User with the matching Expense Claim ID
+Returns the Expense Claim for the User with the matching Expense Claim ID. `dateSubmitted` will be null if the Expense Claim has not yet been submitted.
 
 ```json
 {
-	"expenseClaimID" : "5", 
-	"name" : "June 2015", 
-	"dateSubmitted" : "01/06/2015",
+	"expenseClaimID" : 123456, 
+	"name" : "December 2022", 
+	"dateSubmitted" : "2022-12-01",
 	"currencyID": 1,
 	"status" : "Open",
 	"userId": 123456
@@ -59,7 +59,7 @@ Returns the Expense Claim for the User with the matching Expense Claim ID
 ```
 
 * **`POST v1/expenses`**
-Create a new Expense Claim. This returns the ID of the new Expense Claim. To default to using Expense Claim names of the month and year in the format "Dec 2022", supply a JSON body with no name property
+Create a new Expense Claim. This returns the ID of the new Expense Claim. To default to using Expense Claim names of the month and year in the format "Dec 2022", supply a JSON body with no name property.
 
 ```json
 {
@@ -71,7 +71,6 @@ Create a new Expense Claim. This returns the ID of the new Expense Claim. To def
 {} // will default to the current month and year in the format "Dec 2022"
 ```
 
-
 ```json
 // Return Response
 {
@@ -80,7 +79,7 @@ Create a new Expense Claim. This returns the ID of the new Expense Claim. To def
 ```
 
 * **`PUT v1/expenses/{EXPENSE_CLAIM_ID}`**
-Update the name of an Expense Claim for the relevant Expense Claim ID. Returns a `200 OK` response if the name was successfully updated
+Update the name of an Expense Claim for the relevant Expense Claim ID. Returns a `200 OK` response if the name was successfully updated.
 
 ```json
 {
@@ -89,7 +88,7 @@ Update the name of an Expense Claim for the relevant Expense Claim ID. Returns a
 ```
 
 * **`POST v1/expenses/{EXPENSE_CLAIM_ID}/submit`**
-Submit an Expense Claim for either Line Manager or Financial Manager approval depending upon the client's CMAP configuration. Returns a `true` or `false` success status and notification message
+Submit an Expense Claim for either Line Manager or Financial Manager approval depending upon the client's CMAP configuration. Returns a `true` or `false` success status and notification message.
 
 ```json
 // Return result
@@ -100,7 +99,7 @@ Submit an Expense Claim for either Line Manager or Financial Manager approval de
 
 ## Get Expense Claim Items
 * **`GET v1/expenses/{EXPENSE_CLAIM_ID}/items`**
-Returns all the Expense Claim Items for a single Expense Claim. To retrieve the list of `BillingTypeID` values, make a `GET` request to `v1/resources/expensebillingtypes`. In the event that an Expense Claim Item is a mileage item, then `categoryId` will be `0`, `currencyId` will be `0` and `mileage` and `mileageRateId` will have values. For all other Expense Claim Item types, the `mileage` and `mileageRateId` fields will be `null` and `categoryId` and `currencyId` will be non-zero. To retrieve the `BudgetExternalID` make a `GET` request to `v1/budgets/{PROJECT_ID}/externals`.
+Returns all the Expense Claim Items for a single Expense Claim. To retrieve the list of `BillingTypeID` values, make a `GET` request to **`v1/resources/expensebillingtypes`**. In the event that an Expense Claim Item is a mileage item, then `categoryId` will be `0`, `currencyId` will be `0` and `mileage` and `mileageRateId` will have values. For all other Expense Claim Item types, the `mileage` and `mileageRateId` fields will be `null` and `categoryId` and `currencyId` will be non-zero. To retrieve the `BudgetExternalID` make a `GET` request to **`v1/budgets/{PROJECT_ID}/externals`**.
 
 ```json
 [{ 
@@ -111,13 +110,13 @@ Returns all the Expense Claim Items for a single Expense Claim. To retrieve the 
 	"claimId" : 123456,
 	"currencyId" : 1,
 	"currencyName": "GBP",
-	"date" : "2015-06-01T00:00:00",
-	"description" : "Meal for the client",
-	"exchangeRate" : 0.0, /* nullable */
-	"id" : "7658",
+	"date": "2022-12-01T00:00:00",
+	"description": "Meal for the client",
+	"exchangeRate": 1.0, /* nullable */
+	"id" : 1234567,
 	"mileage" : 123.45, /* nullable */
 	"mileageRateId" : 123, /* nullable */
-	"projectId" : "8767", /* nullable */
+	"projectId" : 123456, /* nullable */
 	"projectName" : "Sample Account, 8978 - New Website Project",
 	"reimburse" : true,
 	"vatRateId" : 1,
@@ -128,7 +127,7 @@ Returns all the Expense Claim Items for a single Expense Claim. To retrieve the 
 ```
 
 * **`GET v1/expenses/{EXPENSE_CLAIM_ID}/items/{EXPENSE_CLAIM_ITEM_ID}`**
-Returns the Expense Claim Item for the Expense Claim ID specified by `EXPENSE_CLAIM_ID` and the Expense Claim Item ID specified by `EXPENSE_CLAIM_ITEM_ID`.  To retrieve the list of `BillingTypeID` values for the `billable` field, make a `GET` request to `v1/resources/expensebillingtypes` Only one pair of `projectId` and `projectName` or `internalCodeId` and `internalCodeName` will be populated in the response. `receiptImage` is a `base64` encoded string representing an encoded `JPG` image.  To retrieve the `BudgetExternalID` make a `GET` request to `v1/budgets/{PROJECT_ID}/externals`.
+Returns the Expense Claim Item for the Expense Claim ID specified by `EXPENSE_CLAIM_ID` and the Expense Claim Item ID specified by `EXPENSE_CLAIM_ITEM_ID`.  To retrieve the list of `BillingTypeID` values for the `billable` field, make a `GET` request to **`v1/resources/expensebillingtypes`** Only one pair of `projectId` and `projectName` or `internalCodeId` and `internalCodeName` will be populated in the response. `receiptImage` is a `base64` encoded string representing an encoded `JPG` image.  To retrieve the `BudgetExternalID` make a `GET` request to **`v1/budgets/{PROJECT_ID}/externals`**.
 
 ```json
 [{ 
@@ -141,15 +140,16 @@ Returns the Expense Claim Item for the Expense Claim ID specified by `EXPENSE_CL
 	"currencyId" : 1,
 	"currency": "GBP",
 	"currencyName": "Great British Pounds",
-	"date" : "2015-06-01T00:00:00",
+	"date" : "2022-12-01T00:00:00",
 	"description" : "Meal for the client",
-	"exchangeRate" : 0.0, /* nullable */
-	"id" : "7658",
+	"exchangeRate" : 1.0, /* nullable */
+	"id" : 1234567,
 	"mileage" : 123.45, /* nullable */
 	"mileageRateId" : 123, /* nullable */
+	"mileageRate": "Standard",
 	"internalCodeId": 12345,
 	"internalCodeName": "Training & Development",
-	"projectId" : "8767", /* nullable */
+	"projectId" : 123456, /* nullable */
 	"projectName" : "Sample Account, 8978 - New Website Project",
 	"reimburse" : true,
 	"receiptImage": "ABCDEF1234560...",
@@ -172,7 +172,7 @@ Create a new Expense Claim Item, returning the newly created Expense Claim Item 
 	"ContractID": 12345, /* only used when the Expense Claim is for a Contract */
 	"ProjectID": 12345, /* only used when the Expense Claim is for a Project */
 	"InternalCodeID": 12345, /* only used when the Expense Claim is for an Internal Code */
-	"ClaimDate": "2015-06-01",
+	"ClaimDate": "2022-12-01",
 	"Mileage": 123.45,
 	"MileageRateID": 12345,
 	"CurrencyID": 1,
@@ -216,13 +216,13 @@ Create a new Expense Claim Item, returning the newly created Expense Claim Item 
 }
 ```
 
-* **`PUT v1/expenses/5/items/1`**
+* **`PUT v1/expenses/{EXPENSE_CLAIM_ID}/items/{EXPENSE_CLAIM_ITEM_ID}`**
 Updates an Expense Claim Item. To retrieve the list of `BillingTypeID` values, make a `GET` request to `v1/resources/expensebillingtypes`. To retrieve the `BudgetExternalID` make a `GET` request to `v1/budgets/{PROJECT_ID}/externals`. `receiptImage` is a `base64` encoded string representing an encoded `JPG` image.
 
 ```json
 // Mileage Expense Claim Item
 {
-	"ExpenseClaimItemID": 1234567,
+	"id": 1234567,
 	"ExpenseClaimID": 123456,
 	"ExpenseCategoryID": 0,
 	"ContractID": 123456, /* only used when the expense claim is for a contract */
@@ -250,7 +250,7 @@ Updates an Expense Claim Item. To retrieve the list of `BillingTypeID` values, m
 ```json
 // Non-Mileage Expense Claim Item
 {
-	"ExpenseClaimItemID": 1234567,
+	"id": 1234567,
 	"ExpenseClaimID": 123456,
 	"ExpenseCategoryID": 123456,
 	"ContractID": 123456, /* only used when the expense claim is for a contract */
