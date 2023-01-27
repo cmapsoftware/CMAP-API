@@ -72,10 +72,12 @@ Use TimeOff to manage holiday bookings in CMAP
 
 ```javascript
 {
+    "UserID": 123456, /* The user to book holiday for. Defaults to the user of the API, if you have the TimeOff admin permission then this can be a user other than the API user. */
     "Date": "2022-10-03",
     "Duration": 5,
     "Notes": "Optional notes about the holiday request",
     "pm": true | false,
+    "status": "Requested" | "Approved", /* The status of the holiday, defaults to Requested, if you have the TimeOff admin permission then this can be created with the status Approved (No appproval emails will be sent). */
     "HolidayCodeID": 0 | [HolidayCodeId]
 }
 ```
@@ -89,6 +91,7 @@ Use TimeOff to manage holiday bookings in CMAP
     "Duration": 5,
     "Notes": "Optional notes about the holiday request",
     "pm": true | false,
+    "status": "Requested" | "Approved", /* The status of the holiday, defaults to Requested, if you have the TimeOff admin permission then this can be updated to the status Approved (No appproval emails will be sent). */
     "HolidayCodeID": 0 | [HolidayCodeId]
 }
 ```
