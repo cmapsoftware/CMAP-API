@@ -123,22 +123,34 @@ Use projects to search for projects within CMAP
 ```javascript
 { 
 	"Title", "Smith Industries"
-        "Code", "34543",
-        "Status", "Potential",
-        "Contact", "John Smith",
-        "Stage", "Initial Lead",
-        "Probability", 10,
-        "EstimatedPrice", 10000,
-        "StartDate", "01/01/2017T00:00:00",
-        "EndDate", "01/01/2018T00:00:00",
-        "FeeType", "Fixed Fee",
-        "Sector", "Health",
-        "ProjectType", "Strategy",
-        "LeadSource", "Existing Client",
-        "Owner", "Jane Smith",
-        "Private", "No"
-        "Bio", ""
-        "Total Project Value" : 0 
+	"Code", "34543",
+	"Status", "Potential",
+	"Contact", "John Smith",
+	"Stage", "Initial Lead",
+	"Probability", 10,
+	"EstimatedPrice", 10000,
+	"StartDate", "01/01/2017T00:00:00",
+	"EndDate", "01/01/2018T00:00:00",
+	"FeeType", "Fixed Fee",
+	"Sector", "Health",
+	"ProjectType", "Strategy",
+	"LeadSource", "Existing Client",
+	"Owner", "Jane Smith",
+	"Private", "No"
+	"Bio", ""
+	"Total Project Value" : 0,
+	"CustomFields" : {
+		"TextField": "Custom Field Text",
+		"TextAreaField": "Custom Field TextArea",
+		"DropdownField": "Item 1",
+		"DateField": "2019-12-31",
+		"YesNoField": "Yes" | "No",
+		"MultiLevelDropdownField": ["Item 1", "Item 1a", "Item 1aa"],
+		"MultiSelectField": ["Item 1", "Item 3", "Item 4"],
+		"UserDropdownField": "Gary Thickett",
+		"UserMultiselectDropdownField": ["First User", "Second User", "Third User"],
+		"NumberField": 1234567.89
+	}
 }
 ```
 ## Get Projects Updated Between Date Range
@@ -147,27 +159,39 @@ Use projects to search for projects within CMAP
 ```javascript
 { 
 	"Title", "Smith Industries"
-        "Code", "34543",
-        "Status", "Potential",
-        "Contact", "John Smith",
-        "Stage", "Initial Lead",
-        "Probability", 10,
-        "EstimatedPrice", 10000,
-        "StartDate", "01/01/2017T00:00:00",
-        "EndDate", "01/01/2018T00:00:00",
-        "FeeType", "Fixed Fee",
-        "Sector", "Health",
-        "ProjectType", "Strategy",
-        "LeadSource", "Existing Client",
-        "Owner", "Jane Smith",
-        "Private", "No"
-        "Bio", ""
-        "Total Project Value" : 0 
+	"Code", "34543",
+	"Status", "Potential",
+	"Contact", "John Smith",
+	"Stage", "Initial Lead",
+	"Probability", 10,
+	"EstimatedPrice", 10000,
+	"StartDate", "01/01/2017T00:00:00",
+	"EndDate", "01/01/2018T00:00:00",
+	"FeeType", "Fixed Fee",
+	"Sector", "Health",
+	"ProjectType", "Strategy",
+	"LeadSource", "Existing Client",
+	"Owner", "Jane Smith",
+	"Private", "No"
+	"Bio", ""
+	"Total Project Value" : 0,
+	"CustomFields" : {
+		"TextField": "Custom Field Text",
+		"TextAreaField": "Custom Field TextArea",
+		"DropdownField": "Item 1",
+		"DateField": "2019-12-31",
+		"YesNoField": "Yes" | "No",
+		"MultiLevelDropdownField": ["Item 1", "Item 1a", "Item 1aa"],
+		"MultiSelectField": ["Item 1", "Item 3", "Item 4"],
+		"UserDropdownField": "Gary Thickett",
+		"UserMultiselectDropdownField": ["First User", "Second User", "Third User"],
+		"NumberField": 1234567.89
+	}
 }
 ```
 
 ## Create Potential Project
-* `* POST v1/project` Create a new Potential Project in CMAP. Note that if `Architectural` is supplied as a `FeeType` then the Project will be created as a Live project and not a potential project. Any Custom Field created on the Live Project page can be specified in the `CustomFields` area with the field name and value, and these will be set when the new project is created.
+* `* POST v1/project` Create a new Potential Project in CMAP. Note that if `Architectural` is supplied as a `FeeType` then the Project will be created as a Live project and not a potential project. Any Custom Field created on the Project page can be specified in the `CustomFields` area with the field name and value, and these will be set when the new project is created.
 
 ```javascript
 {
@@ -185,6 +209,42 @@ Use projects to search for projects within CMAP
   "ProjectManager":"Gary Thickett",
   "Owner":"Gary Thickett",
   "FeeType": "FixedFee" | "Architectural" | "PureTimeMaterials" | "ResourcedTimeMaterials" | "Syndication" | "Retainer",
+  "EsimatedPrice": 1000000,
+  "ExternalRef":"50345-sdf",              
+  "CustomFields" : {
+	  "TextField": "Custom Field Text",
+	  "TextAreaField": "Custom Field TextArea",
+	  "DropdownField": "Item 1",
+	  "DateField": "2019-12-31",
+	  "YesNoField": "Yes" | "No",
+	  "MultiLevelDropdownField": ["Item 1", "Item 1a", "Item 1aa"],
+	  "MultiSelectField": ["Item 1", "Item 3", "Item 4"],
+	  "UserDropdownField": "Gary Thickett",
+	  "UserMultiselectDropdownField": ["First User", "Second User", "Third User"],
+	  "NumberField": 1234567.89
+  }
+}
+```
+
+## Update Project
+* `* PUT v1/project` Update a Project in CMAP. Only Live or Potential Projects can be updated. Any Custom Field on the Project page can be specified in the `CustomFields` area with the field name and value, and these will be updated with the project.
+
+```javascript
+{
+  "Title":"Awesome New Opportunity",
+  "Company":"Awesome Inc",
+  "Contact":"Dave Awesome",
+  "Email": "email@email.com"
+  "Stage":"Project Stage 1", /* Can only be updated on potential projects */
+  "Probability":"50", /* Can only be updated on potential projects */
+  "StartDate":"2019-01-01",
+  "EndDate":"2019-12-31",
+  "Sector":"Creative",
+  "ProjectType":"CMAP Services",
+  "LeadSource":"Email",
+  "ProjectManager":"Gary Thickett",
+  "Owner":"Gary Thickett",
+  "FeeType": "FixedFee" | "Architectural" | "PureTimeMaterials" | "ResourcedTimeMaterials" | "Syndication" | "Retainer", /* Can only be updated on potential projects */
   "EsimatedPrice": 1000000,
   "ExternalRef":"50345-sdf",              
   "CustomFields" : {
