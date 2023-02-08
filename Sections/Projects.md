@@ -209,7 +209,7 @@ Use projects to search for projects within CMAP
   "ProjectManager":"Gary Thickett",
   "Owner":"Gary Thickett",
   "FeeType": "FixedFee" | "Architectural" | "PureTimeMaterials" | "ResourcedTimeMaterials" | "Syndication" | "Retainer",
-  "EsimatedPrice": 1000000,
+  "EstimatedPrice": 1000000,
   "ExternalRef":"50345-sdf",              
   "CustomFields" : {
 	  "TextField": "Custom Field Text",
@@ -245,7 +245,7 @@ Use projects to search for projects within CMAP
   "ProjectManager":"Gary Thickett",
   "Owner":"Gary Thickett",
   "FeeType": "FixedFee" | "Architectural" | "PureTimeMaterials" | "ResourcedTimeMaterials" | "Syndication" | "Retainer", /* Can only be updated on potential projects */
-  "EsimatedPrice": 1000000,
+  "EstimatedPrice": 1000000,
   "ExternalRef":"50345-sdf",              
   "CustomFields" : {
 	  "TextField": "Custom Field Text",
