@@ -81,6 +81,29 @@ Use projects to search for projects within CMAP
 }]
 ```
 
+## Get Projects Excluding Retainers
+* `* GET v1/projects/ProjectsForExpenses/?query=[query]` Returns the projects that match the query parameter specified and that are not `Retainer` projects
+```javascript
+
+[{
+	"ProjectId": 1234567,
+	"Code": "1000",
+	"Title": "Development Project",
+	"CodeAndTitle": "1000 - Development Project",
+	"AccountId": 1234567,
+	"Account": "Smith Industries"
+},
+{
+	"ProjectId": 1234568,
+	"Code": "1001",
+	"Title": "Onboarding Project",
+	"CodeAndTitle": "1001 - Onboarding Project",
+	"AccountId": 1234567,
+	"Account": "Smith Industries"
+}]
+
+```
+
 ## Get Contact Projects
 * `* GET v1/projects/?status=[status]&contactId=876` Returns all the projects associated with a contact. The status of the project can be `potential` or `project` or `closed` or 'lead' or 'rfp'
 
