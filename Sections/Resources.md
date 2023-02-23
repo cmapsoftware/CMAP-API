@@ -100,7 +100,7 @@ Use resources to return various helper items used throughout the system
 }]
 ```
 
-* `* GET v1/resources/activitycategories` Returns the list of activity categories
+* `* GET v1/resources/activitycategories` Returns the list of currently available activity categories
 
 ```javascript
 [{ 
