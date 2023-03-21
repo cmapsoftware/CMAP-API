@@ -12,7 +12,7 @@ Use companies to list, view or search for companies within CMAP
 
 * `* GET v1/Companies/5` Returns the company with the matching id (if that company exists)
 ```javascript
-[{ 
+{ 
 	"id" : "23423",
 	"name" : "Smith Industries",
 	"telephone" : "01625 521 000",
@@ -20,12 +20,12 @@ Use companies to list, view or search for companies within CMAP
 	"fax" : "01625 521 001",
 	"notes" : "Some information about this company",
 	"address" : "1 Hope Street, Manchester, M22 4TG" 
-}]
+}
 ```
 
 * `* POST v1/Companies/` Creates the Company and returns the Id
 ```javascript
-[{ 
+{ 
 	"name" : "Smith Industries",
 	"telephone" : "01625 521 000",
 	"website" : "http://www.smithindustries.com",
@@ -41,12 +41,12 @@ Use companies to list, view or search for companies within CMAP
 		"countyState":"Greater Manchester",
 		"postcode":"M22 4TG"
 	}]
-}]
+}
 ```
 
 * `* PUT v1/Companies/` Creates the Company and returns the Id
 ```javascript
-[{ 
+{ 
 	"accountId":"5",
 	"name" : "Smith Industries",
 	"telephone" : "01625 521 000",
@@ -63,7 +63,7 @@ Use companies to list, view or search for companies within CMAP
 		"countyState":"Greater Manchester",
 		"postcode":"M22 4TG"
 	}]
-}]
+}
 ```
 
 * `* GET v1/Companies?q=[query]` Returns all companies that match the search query
