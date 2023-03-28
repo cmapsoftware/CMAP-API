@@ -44,7 +44,7 @@ Use companies to list, view or search for companies within CMAP
 }
 ```
 
-* `* PUT v1/Companies/` Creates the Company and returns the Id
+* `* PUT v1/Companies/` Updates the Company and returns the Id
 ```javascript
 { 
 	"accountId":"5",
