@@ -2,7 +2,7 @@
 Use TimeOff to manage holiday bookings in CMAP
 
 ## Get TimeOff
-* `* GET v1/TimeOff/all` Returns all the time off 
+* `* GET v2/TimeOff/all` Returns all the time off 
 
 ```javascript
 [{ 
@@ -15,7 +15,9 @@ Use TimeOff to manage holiday bookings in CMAP
 	"codeId" : 0,
 	"notes" : "Some notes about the holiday", 
 	"rejected" : true, 
-	"requested" : true
+	"requested" : true,
+	"hours": 16,
+	"isHoursBooking": false
 }]
 ```
 
