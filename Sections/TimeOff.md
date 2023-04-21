@@ -89,7 +89,7 @@ Use TimeOff to manage holiday bookings in CMAP
     "HolidayCodeID": 0 | [HolidayCodeId]
 }
 ```
-"Duration" can be replaced with "Hours", to save the holiday length in hours (instead of the duration in days).
+"Duration" can be replaced with "Hours", to create the holiday length in hours (instead of the duration in days).
 
 * `* PUT v1/TimeOff` Update a requested holiday. `pm` allows `true` or `false`, true indicating that this holiday will start at 12 noon. HolidayCodeId 0 indicates the standard Holiday Allowances, whereas specifying the HolidayCodeId as something other than 0 indicates a specific time off code. Note that HolidayID must be specified.
 
@@ -104,6 +104,7 @@ Use TimeOff to manage holiday bookings in CMAP
     "HolidayCodeID": 0 | [HolidayCodeId]
 }
 ```
+"Duration" can be replaced with "Hours", to save the holiday length in hours (instead of the duration in days).
 
 * `* DELETE v1/TimeOff/5` Deletes a holiday
 
@@ -119,7 +120,6 @@ Use TimeOff to manage holiday bookings in CMAP
 	"InLieu":"0" /* number of days, only relevant for CMAP Holidays */
 }
 ```
-
  "Days" field may be replaced by "Hours" and the entitlement will be saved as that number of hours.
 
  `* PUT v1/TimeOffAllowance` Updates a holiday allowance for a user
