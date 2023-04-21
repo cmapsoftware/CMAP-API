@@ -21,7 +21,7 @@ Use TimeOff to manage holiday bookings in CMAP
 }]
 ```
 
-* `* GET v1/TimeOff` Returns all the time off for the logged in user
+* `* GET v2/TimeOff` Returns all the time off for the logged in user
 
 ```javascript
 [{ 
@@ -34,11 +34,13 @@ Use TimeOff to manage holiday bookings in CMAP
 	"codeId" : 0,
 	"notes" : "Some notes about the holiday", 
 	"rejected" : true, 
-	"requested" : true
+	"requested" : true,
+	"Hours": 16,
+	"IsHoursBooking": false
 }]
 ```
 
-* `* GET v1/TimeOff/5` Returns all the time off with the matching id
+* `* GET v2/TimeOff/5` Returns all the time off with the matching id
 
 ```javascript
 [{ 
@@ -51,7 +53,9 @@ Use TimeOff to manage holiday bookings in CMAP
 	"codeId" : 0,
 	"notes" : "Some notes about the holiday", 
 	"rejected" : true, 
-	"requested" : true
+	"requested" : true,
+	"Hours": 16,
+	"IsHoursBooking": false
 }]
 ```
 
@@ -61,9 +65,11 @@ Use TimeOff to manage holiday bookings in CMAP
 {
 	"days" : 25,
 	"daysRemaining" : 4,
+	"allowanceUnit": "Days",
 	"carriedForward" : 3,
 	"timeInLieu" = 0,
 	"allowances" = [
+		{"allowance":25, "allowanceRemaing" : 4, "code": "Holidays"},
 		{"allowance":1, "allowanceRemaing" : 0, "code": "Birthday", "codeId" : 3},
 		{"allowance":2, "allowanceRemaing" : 2, "code" : "Family Time", "codeId" : 2}
 	]
@@ -83,6 +89,8 @@ Use TimeOff to manage holiday bookings in CMAP
     "HolidayCodeID": 0 | [HolidayCodeId]
 }
 ```
+
+* `* "Duration" can be replaced with "Hours", to save the holiday length in hours (instead of the duration in days).
 
 * `* PUT v1/TimeOff` Update a requested holiday. `pm` allows `true` or `false`, true indicating that this holiday will start at 12 noon. HolidayCodeId 0 indicates the standard Holiday Allowances, whereas specifying the HolidayCodeId as something other than 0 indicates a specific time off code. Note that HolidayID must be specified.
 
@@ -113,6 +121,7 @@ Use TimeOff to manage holiday bookings in CMAP
 }
 ```
 
+* `"Days" field may be replaced by "Hours" and the entitlement will be saved as that number of hours.
 
 * `* PUT v1/TimeOffAllowance` Updates a holiday allowance for a user
 
@@ -126,3 +135,4 @@ Use TimeOff to manage holiday bookings in CMAP
 	"InLieu":"0" /* number of days, only relevant for CMAP Holidays */
 }
 ```
+* `"Days" field may be replaced by "Hours" and the entitlement will be saved as that number of hours.
