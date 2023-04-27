@@ -191,7 +191,7 @@ Use projects to search for projects within CMAP
 ```
 
 ## Create Potential Project
-* `* POST v1/project` Create a new Potential Project in CMAP. Note that if `Architectural` is supplied as a `FeeType` then the Project will be created as a Live project and not a potential project. Any Custom Field created on the Project page can be specified in the `CustomFields` area with the field name and value, and these will be set when the new project is created.
+* `* POST v1/projects` Create a new Potential Project in CMAP. Note that if `Architectural` is supplied as a `FeeType` then the Project will be created as a Live project and not a potential project. Any Custom Field created on the Project page can be specified in the `CustomFields` area with the field name and value, and these will be set when the new project is created.
 
 ```javascript
 {
@@ -227,7 +227,7 @@ Use projects to search for projects within CMAP
 ```
 
 ## Update Project
-* `* PUT v1/project` Update a Project in CMAP. Only Live or Potential Projects can be updated. Any Custom Field on the Project page can be specified in the `CustomFields` area with the field name and value, and these will be updated with the project.
+* `* PUT v1/projects/UpdateProject` Update a Project in CMAP. Only Live or Potential Projects can be updated. Any Custom Field on the Project page can be specified in the `CustomFields` area with the field name and value, and these will be updated with the project.
 
 ```javascript
 {
