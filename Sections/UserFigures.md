@@ -14,7 +14,7 @@ User the below UserFigures endpoints to query, add and update a users' User Figu
         "WorkingHours": 0.0,
         "ProductivityTarget": 0.0,
         "ActualCostRate": 0.0,
-        "RoleName": "Managing Director",
+        "RoleName": "Managing Director"  | "Non-Chargeable Admin",
         "ContractType": null,
         "ContractMonthlySalary": null,
         "ContractMultiplier": null
@@ -25,7 +25,7 @@ User the below UserFigures endpoints to query, add and update a users' User Figu
         "WorkingHours": 37.5,
         "ProductivityTarget": 0.0,
         "ActualCostRate": 0.0,
-        "RoleName": "Managing Director",
+        "RoleName": "Managing Director" | "Non-Chargeable Admin",
         "ContractType": null,
         "ContractMonthlySalary": null,
         "ContractMultiplier": null
@@ -45,7 +45,7 @@ User the below UserFigures endpoints to query, add and update a users' User Figu
     "ActualCost": 125,
     "Office": "Office Name",
     "Team": "Team Name",
-    "Role": "Managing Director",
+    "Role": "Managing Director" | "Non-Chargeable Admin",
     "ContractType": "JobSalary" | "OvertimeSalary" | "Hourly",
     "ContractMonthlySalary": 2250,
     "ContractMultiplier": 1.41
@@ -64,7 +64,7 @@ User the below UserFigures endpoints to query, add and update a users' User Figu
     "ActualCost": 125,
     "Office": "Office Name",
     "Team": "Team Name",
-    "Role": "Managing Director",
+    "Role": "Managing Director" | "Non-Chargeable Admin",
     "ContractType": "JobSalary" | "OvertimeSalary" | "Hourly",
     "ContractMonthlySalary": 2250,
     "ContractMultiplier": 1.41
