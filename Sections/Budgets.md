@@ -1,6 +1,76 @@
 # Budgets
 Use budgets to return budget specific data for a client or project
 
+## Tabs
+* `GET v2/Budgets/123/Tabs` Returns the tabs for a given Non-AEC project.
+```javascript
+[{
+    "Id" : "456",
+    "ProjectId": "123",
+    "Name" : "Additional Fees",
+}]
+```
+
+## Stages
+* `GET v2/Budgets/123/Stages` Returns the stages for a given project.
+```javascript
+[{
+    "Id" : "456",
+    "ProjectId": "123", // AEC only
+    "FeeType": "AEC", // AEC only
+    "Name" : "Additional Fees",
+    "StartDate": "2023-01-01T00:00:00",
+    "EndDate": "2023-01-01T00:00:00",
+}]
+```
+
+## Tasks
+* `GET v2/Budgets/123/Tasks` Returns the tasks for a given project.
+```javascript
+[{
+    "Id" : "456", // AEC Detailed only
+    "StageId": "789", // AEC only
+    "Name": "Additional Fees",
+    "Notes": "",
+    "StartDate": "2023-01-01T00:00:00",
+    "EndDate": "2023-01-01T00:00:00",
+}]
+```
+
+## Externals
+* `GET v2/Budgets/123/Externals` Returns the externals for a given AEC project.
+```javascript
+[{
+    "StageId" : "789",
+    "CalculationType": "Fixed Fee",
+    "BillingType": "Scheduled",
+    "Name": "External 1",
+    "CostPrice": "99.99",
+    "SalePrice": "99.99",
+    "ActualPrice": "99.99",
+}]
+```
+
+## Additionals
+* `GET v2/Budgets/123/Additionals` Returns the additionals for a given Non-AEC project.
+```javascript
+[{
+    "Name": "External 1",
+    "CostPrice": "99.99",
+    "SalePrice": "99.99",
+    "ActualPrice": "99.99",
+}]
+```
+
+## Adjustments
+* `GET v2/Budgets/123/Adjustments` Returns the adjustments for a given Non-AEC project.
+```javascript
+[{
+    "Description" : "Test Adjustment",
+    "Value": "99",
+}]
+```
+
 ## Get Externals
 * `GET v1/budgets/1/externals` Returns the additionals/externals for a given project
 
