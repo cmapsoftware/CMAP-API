@@ -34,6 +34,14 @@ Use budgets to return budget specific data for a client or project
     "Notes": "",
     "StartDate": "2023-01-01T00:00:00",
     "EndDate": "2023-01-01T00:00:00",
+    "Roles": [
+        {
+            "Name": "Test Role",
+            "Hours": "7.5", // If BudgetInDays Feature is off
+            "Days": "1", // If BudgetInDays Feature is on
+            "Value": "100"
+        }
+    ]
 }]
 ```
 
