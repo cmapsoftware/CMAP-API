@@ -28,8 +28,8 @@ Use budgets to return budget specific data for a client or project
 * `GET v2/Budgets/123/Tasks` Returns the tasks for a given project.
 ```javascript
 [{
-    "Id" : "456", // AEC Detailed only
-    "StageId": "789", // AEC only
+    "Id" : "456",
+    "StageId": "789",
     "Name": "Additional Fees",
     "Notes": "",
     "StartDate": "2023-01-01T00:00:00",
