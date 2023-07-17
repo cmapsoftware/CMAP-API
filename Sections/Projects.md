@@ -191,14 +191,16 @@ Use projects to search for projects within CMAP
 ```
 
 ## Create Potential Project
-* `* POST v1/projects` Create a new Potential Project in CMAP. Note that if `Architectural` is supplied as a `FeeType` then the Project will be created as a Live project and not a potential project. Any Custom Field created on the Project page can be specified in the `CustomFields` area with the field name and value, and these will be set when the new project is created.
+* `* POST v1/projects` Create a new Potential Project in CMAP. Note that if `Architectural` is supplied as a `FeeType` then the Project will be created as a Live project and not a Potential project. Any Custom Field created on the Project page can be specified in the `CustomFields` area with the field name and value, and these will be set when the new project is created.<br/><br/>Note that the logged in User will only be able to create a `Project` for an `Office` and `Team` that they have access to in CMap. Not specifying `Office` and `Team` will result in the Project defaulting back to the `Office` and `Team` linked to the `Owner` field specified.
 
 ```javascript
 {
   "Title":"Awesome New Opportunity",
   "Company":"Awesome Inc",
   "Contact":"Dave Awesome",
-  "Email": "email@email.com"
+  "Email": "email@email.com",
+  "Office": "Office Name",
+  "Team": "Team Name",
   "Stage":"Project Stage 1",
   "Probability":"50",
   "StartDate":"2019-01-01",
@@ -227,16 +229,18 @@ Use projects to search for projects within CMAP
 ```
 
 ## Update Project
-* `* PUT v1/projects/UpdateProject` Update a Project in CMAP. Only Live or Potential Projects can be updated. Any Custom Field on the Project page can be specified in the `CustomFields` area with the field name and value, and these will be updated with the project.
+* `* PUT v1/projects/UpdateProject` Update a Project in CMAP. Only `Live` or `Potential` projects can be updated. Any Custom Field on the Project page can be specified in the `CustomFields` area with the field name and value, and these will be updated with the project.<br/><br/>Note that the logged in User will only be able to update a `Project` to an  `Office` and `Team` that they have access to in CMap. Not specifying `Office` and `Team` will result in the Project defaulting back to the `Office` and `Team` linked to the `Owner` field specified.<br><br/>`Stage`, `Probability` and `FeeType` can only be updated on `Potential` projects only.
 
 ```javascript
 {
   "Title":"Awesome New Opportunity",
   "Company":"Awesome Inc",
   "Contact":"Dave Awesome",
-  "Email": "email@email.com"
-  "Stage":"Project Stage 1", /* Can only be updated on potential projects */
-  "Probability":"50", /* Can only be updated on potential projects */
+  "Email": "email@email.com",
+  "Office": "Office Name",
+  "Team": "Team Name",
+  "Stage":"Project Stage 1",
+  "Probability":"50",
   "StartDate":"2019-01-01",
   "EndDate":"2019-12-31",
   "Sector":"Creative",
@@ -244,7 +248,7 @@ Use projects to search for projects within CMAP
   "LeadSource":"Email",
   "ProjectManager":"Gary Thickett",
   "Owner":"Gary Thickett",
-  "FeeType": "FixedFee" | "Architectural" | "PureTimeMaterials" | "ResourcedTimeMaterials" | "Syndication" | "Retainer", /* Can only be updated on potential projects */
+  "FeeType": "FixedFee" | "Architectural" | "PureTimeMaterials" | "ResourcedTimeMaterials" | "Syndication" | "Retainer",
   "EstimatedPrice": 1000000,
   "ExternalRef":"50345-sdf",              
   "CustomFields" : {
