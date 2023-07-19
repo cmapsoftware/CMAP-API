@@ -167,7 +167,7 @@ Use Timesheets to manage timesheet entries for the logged in user
 	"additionalTime" : false
 }
 ```
-* `* PUT v1/timesheets/5` Updates a timesheet entry
+* `* PUT v1/timesheets` Updates a timesheet entry
 
 ```javascript
 { 
