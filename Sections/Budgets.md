@@ -5,8 +5,8 @@ Use budgets to return budget specific data for a client or project
 * `GET v2/Budgets/123/Tabs` Returns the tabs for a given Non-AEC project.
 ```javascript
 [{
-    "Id" : "456",
-    "ProjectId": "123",
+    "Id" : 123456,
+    "ProjectId": 123456,
     "Name" : "Additional Fees",
 }]
 ```
@@ -15,7 +15,8 @@ Use budgets to return budget specific data for a client or project
 * `GET v2/Budgets/123/Stages` Returns the stages for a given project.
 ```javascript
 [{
-    "Id" : "456",
+    "Id" : 123456,
+	"TabId": 123546
     "ProjectId": "123", // AEC only
     "FeeType": "AEC", // AEC only
     "Name" : "Additional Fees",
@@ -28,8 +29,8 @@ Use budgets to return budget specific data for a client or project
 * `GET v2/Budgets/123/Tasks` Returns the tasks for a given project.
 ```javascript
 [{
-    "Id" : "456",
-    "StageId": "789",
+    "Id" : 123456,
+    "StageId": 123456,
     "Name": "Additional Fees",
     "Notes": "",
     "StartDate": "2023-01-01T00:00:00",
@@ -37,9 +38,9 @@ Use budgets to return budget specific data for a client or project
     "Roles": [
         {
             "Name": "Test Role",
-            "Hours": "7.5", // If BudgetInDays Feature is off
-            "Days": "1", // If BudgetInDays Feature is on
-            "Value": "100"
+            "Hours": 7.5, // If BudgetInDays Feature is off
+            "Days": 1, // If BudgetInDays Feature is on
+            "Value": 100
         }
     ]
 }]
@@ -49,13 +50,13 @@ Use budgets to return budget specific data for a client or project
 * `GET v2/Budgets/123/Externals` Returns the externals for a given AEC project.
 ```javascript
 [{
-    "StageId" : "789",
+    "StageId" : 123456,
     "CalculationType": "Fixed Fee",
     "BillingType": "Scheduled",
     "Name": "External 1",
-    "CostPrice": "99.99",
-    "SalePrice": "99.99",
-    "ActualPrice": "99.99",
+    "CostPrice": 99.99,
+    "SalePrice": 99.99,
+    "ActualPrice": 99.99,
 }]
 ```
 
@@ -64,9 +65,9 @@ Use budgets to return budget specific data for a client or project
 ```javascript
 [{
     "Name": "External 1",
-    "CostPrice": "99.99",
-    "SalePrice": "99.99",
-    "ActualPrice": "99.99",
+    "CostPrice": 99.99,
+    "SalePrice": 99.99,
+    "ActualPrice": 99.99,
 }]
 ```
 
@@ -75,7 +76,7 @@ Use budgets to return budget specific data for a client or project
 ```javascript
 [{
     "Description" : "Test Adjustment",
-    "Value": "99",
+    "Value": 99.99,
 }]
 ```
 
