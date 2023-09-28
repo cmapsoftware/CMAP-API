@@ -1,5 +1,5 @@
 # Purchase Invoices
-Use Purchase Invoices to manage the pushing of Purchase Invoices into CMap
+Use Purchase Invoices to manage the pushing of Purchase Invoices into CMap from an external source
 
 ## Create Batch
 * `* POST v1/PurchaseInvoices/PushPurchaseInvoices` Creates a Batch of Purchase Invoices containing the array of supplied Purchase Invoices, the Batch will be named "Imported - dd/MM/yy HH:mm" and will be associated the Office of the User making the API call.
@@ -17,7 +17,7 @@ Use Purchase Invoices to manage the pushing of Purchase Invoices into CMap
       "BudgetExternalId":4534534, //Id of the Budget External the Purchase Invoice should be associated with (optional), default of 0 if not supplied
       "VATRate":"20", //must match an existing VAT Rate
       "Description":"Client description of purchase invoice",
-      "Net":"100", 
-      "VAT":"20"
+      "Net":100, 
+      "VAT":20
 }]
 ```
