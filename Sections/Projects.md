@@ -191,7 +191,7 @@ Use projects to search for projects within CMAP
 ```
 
 ## Create Potential Project
-* `* POST v1/projects` Create a new Potential Project in CMAP. Note that if `Architectural` is supplied as a `FeeType` then the Project will be created as a Live project and not a Potential project. Any Custom Field created on the Project page can be specified in the `CustomFields` area with the field name and value, and these will be set when the new project is created.<br/><br/>Note that the logged in User will only be able to create a `Project` for an `Office` and `Team` that they have access to in CMap. Not specifying `Office` and `Team` will result in the Project defaulting back to the `Office` and `Team` linked to the `Owner` field specified.
+* `* POST v1/project` Create a new Potential Project in CMAP. Note that if `Architectural` is supplied as a `FeeType` then the Project will be created as a Live project and not a Potential project. Any Custom Field created on the Project page can be specified in the `CustomFields` area with the field name and value, and these will be set when the new project is created.<br/><br/>Note that the logged in User will only be able to create a `Project` for an `Office` and `Team` that they have access to in CMap. Not specifying `Office` and `Team` will result in the Project defaulting back to the `Office` and `Team` linked to the `Owner` field specified.
 
 ```javascript
 {
