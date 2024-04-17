@@ -124,7 +124,17 @@ Use contacts to list, view or search for contacts within CMAP
 	"ownerId" : 454,
 	"mainContact" : true,
 	"financeContact" : false,
-	"notes" : "Some information about this contact"
+	"notes" : "Some information about this contact",
+	"CustomFields":{
+		"Text Field":"Some exciting text here",
+		"Number Field":4356,
+		"Dropdown":"one",
+		"Date Field":"2024-01-01",
+		"Boolean":"Yes",
+		"Dropdown Multi":["Item 1", "Item 2"],
+		"User Field":"Jim Murphy",
+		"User Multi":["Jim Murphy","Arthur Dent"]
+	}
 }
 ```
 
@@ -143,7 +153,17 @@ Use contacts to list, view or search for contacts within CMAP
 	"ownerId" : 454,
 	"mainContact" : true,
 	"financeContact" : false,
-	"notes" : "Some information about this contact"
+	"notes" : "Some information about this contact",
+	"CustomFields":{
+		"Text Field":"Some exciting text here",
+		"Number Field":4356,
+		"Dropdown":"one",
+		"Date Field":"2024-01-01",
+		"Boolean":"Yes",
+		"Dropdown Multi":["Item 1", "Item 2"],
+		"User Field":"Jim Murphy",
+		"User Multi":["Jim Murphy","Arthur Dent"]
+	}
 }
 ```
 

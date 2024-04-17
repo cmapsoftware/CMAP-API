@@ -40,7 +40,17 @@ Use companies to list, view or search for companies within CMAP
 		"townCity":"Manchester",
 		"countyState":"Greater Manchester",
 		"postcode":"M22 4TG"
-	}]
+	}],
+	"CustomFields":{
+		"Text Field":"Some exciting text here",
+		"Number Field":4356,
+		"Dropdown":"one",
+		"Date Field":"2024-01-01",
+		"Boolean":"Yes",
+		"Dropdown Multi":["Item 1", "Item 2"],
+		"User Field":"Jim Murphy",
+		"User Multi":["Jim Murphy","Arthur Dent"]
+	}
 }
 ```
 
@@ -62,7 +72,17 @@ Use companies to list, view or search for companies within CMAP
 		"townCity":"Manchester",
 		"countyState":"Greater Manchester",
 		"postcode":"M22 4TG"
-	}]
+	}],
+	"CustomFields":{
+		"Text Field":"Some exciting text here",
+		"Number Field":4356,
+		"Dropdown":"one",
+		"Date Field":"2024-01-01",
+		"Boolean":"Yes",
+		"Dropdown Multi":["Item 1", "Item 2"],
+		"User Field":"Jim Murphy",
+		"User Multi":["Jim Murphy","Arthur Dent"]
+	}
 }
 ```
 
