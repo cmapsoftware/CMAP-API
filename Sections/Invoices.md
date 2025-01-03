@@ -51,6 +51,5 @@ Use Invoices to manage invoice related items in CMap
 
 * `* POST v1/invoices/MarkAsPaid` Marks invoices with matching Ids as paid
 ``` javascript
-{
-   "InvoiceIds":[23,34,45]
-}
+[23,34,45]
+```
