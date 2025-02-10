@@ -44,7 +44,7 @@ Use projects to search for projects within CMAP
 ```
 
 ## Get Projects
-* `* GET v1/projects/?status=[status]&q=[query]` Returns the projects that match search query and status. Status can be `potential` or `project` or `closed`
+* `* GET v1/projects/?status=[status]&q=[query]` Returns the projects that match search query and status. Status can be `Potential` or `Project` or `Closed` - note: status is case sensitive
 
 ```javascript
 [{
