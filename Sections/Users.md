@@ -70,7 +70,7 @@ Use users to list all users or search for users
 ```
 * `* POST v1/users` Creates a User in CMAP
 
-To specify data for Dropdown Lists, Multi-Select Dropdown Lists, Multi-Select Dropdown Lists with Score the dropdown options must be setup in CMap first.
+To specify data for Dropdown Lists, Multi-Select Dropdown Lists, Multi-Select Dropdown Lists with Score the dropdown options must be setup in CMap first. If the response '402 Payment Required' with the message 'User limit reached' is returned, then the user will not have been created and CMap support will need to be contacted to request an increase in your user limit.
 
 To specify data for the User Dropdown List or User Multi-Select Dropdown Lists, the user's UserID is required.
 ```javascript
@@ -115,7 +115,7 @@ To specify data for the User Dropdown List or User Multi-Select Dropdown Lists, 
 ```
 
 * `* PUT v1/users` Updates a User in CMAP
-To specify data for Dropdown Lists, Multi-Select Dropdown Lists, Multi-Select Dropdown Lists with Score the dropdown options must be setup in CMap first.
+To specify data for Dropdown Lists, Multi-Select Dropdown Lists, Multi-Select Dropdown Lists with Score the dropdown options must be setup in CMap first. If the response '402 Payment Required' with the message 'User limit reached' is returned, then the user will not have been updated to 'Employee' and CMap support will need to be contacted to request an increase in your user limit.
 
 To specify data for the User Dropdown List or User Multi-Select Dropdown Lists, the user's UserID is required.
 
